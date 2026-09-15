@@ -75,6 +75,7 @@ const alternates = getAlternateUrls(currentPath);
     <link rel="alternate" hreflang={alt.locale} href={alt.href} />
   ))}
   <link rel="alternate" hreflang="x-default" href={alternates.find(a => a.locale === 'en')?.href} />
+  <link rel="alternate" type="text/markdown" href="https://www.toileblanche.com/llms.txt" title="LLM context" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="32x32" />

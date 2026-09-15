@@ -2,6 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /mews/
 
+# LLM context (https://llmstxt.org)
+# https://www.toileblanche.com/llms.txt
+# https://www.toileblanche.com/llms-full.txt
+
 # AI Search Engines — explicitly welcome
 User-agent: GPTBot
 Allow: /
