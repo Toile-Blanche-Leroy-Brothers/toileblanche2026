@@ -34,7 +34,6 @@ const {
 } = Astro.props;
 
 const GTM_ID = "GTM-52R8BBP";
-const AXEPTIO_ID = "63ce737f6a87883d8a3d1f79";
 const alternates = getAlternateUrls(currentPath);
 ---
 
@@ -86,11 +85,10 @@ const alternates = getAlternateUrls(currentPath);
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#FAF8F3" />
 
-  <!-- Preconnect: max 4 origins (fonts, GTM, Axeptio). Zenchef omitted — loads async, not LCP-critical -->
+  <!-- Preconnect: max 4 origins (fonts, GTM). Zenchef omitted — loads async, not LCP-critical -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  <link rel="preconnect" href="https://static.axept.io" crossorigin />
   <!-- Fonts: load async to avoid render blocking (display=swap already in URL) -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500;1,600&family=Didact+Gothic&family=Gilda+Display&family=Heebo:wght@100;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500;1,600&family=Didact+Gothic&family=Gilda+Display&family=Heebo:wght@100;400&display=swap" rel="stylesheet" /></noscript>
@@ -116,44 +114,19 @@ const alternates = getAlternateUrls(currentPath);
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="ybV56V__njW0TIX5AEH_299IVdVUSQYtEk-I8KSaeQQ" />
 
-  <!-- Axeptio + Consent Mode defaults (single load; Astro emits both ternary is:inline scripts) -->
-  <script is:inline define:vars={{ axeptioClientId: AXEPTIO_ID, axeptioCookiesVersion: locale === 'fr' ? 'toileblanche-fr' : 'toileblanche-en' }}>
-    window.axeptioSettings = {
-      clientId: axeptioClientId,
-      cookiesVersion: axeptioCookiesVersion,
-      googleConsentMode: {
-        default: {
-          analytics_storage: "denied",
-          ad_storage: "denied",
-          ad_user_data: "denied",
-          ad_personalization: "denied",
-          wait_for_update: 500
-        }
-      }
-    };
-
-    (function(d, s) {
-      if (d.querySelector('script[src*="axept"]') || window.axeptio) return;
-      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-      e.async = true;
-      e.src = "https://static.axept.io/sdk.js";
-      t.parentNode.insertBefore(e, t);
-    })(document, "script");
-
-    void 0 === window._axcb && (window._axcb = []);
-    window._axcb.push(function(axeptio) {
-      axeptio.on("cookies:complete", function(choices) {
-        var marketing = !!(choices && (choices.google_ads || choices.facebook_pixel));
-        if (typeof fbq === "function") {
-          if (marketing) {
-            fbq("consent", "grant");
-            fbq("track", "PageView");
-          } else {
-            fbq("consent", "revoke");
-          }
-        }
-      });
+  <!-- Consent Mode V2 defaults before GTM. Axept and Meta Pixel load from GTM only. -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
   </script>
 
   <script is:inline>
@@ -162,21 +135,6 @@ const alternates = getAlternateUrls(currentPath);
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-52R8BBP');
-  </script>
-
-  <!-- Meta Pixel (is:inline — do not bundle; required for fbq). Consent: revoke until Axeptio grants marketing. -->
-  <script is:inline>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('consent', 'revoke');
-    fbq('init', '517991158551582');
-    fbq('track', 'PageView');
   </script>
 
   <!-- Mews Booking Engine: loaded on demand when user clicks Book (saves ~1.2MB initial payload) -->
