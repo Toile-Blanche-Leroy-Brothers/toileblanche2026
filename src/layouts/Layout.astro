@@ -116,82 +116,45 @@ const alternates = getAlternateUrls(currentPath);
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="ybV56V__njW0TIX5AEH_299IVdVUSQYtEk-I8KSaeQQ" />
 
-  <!-- Axeptio + Consent Mode defaults (is:inline — synchronous, not bundled by Astro) -->
-  {locale === 'fr' ? (
-    <script is:inline>
-      window.axeptioSettings = {
-        clientId: "63ce737f6a87883d8a3d1f79",
-        cookiesVersion: "toileblanche-fr",
-        googleConsentMode: {
-          default: {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied",
-            wait_for_update: 500
+  <!-- Axeptio + Consent Mode defaults (single load; Astro emits both ternary is:inline scripts) -->
+  <script is:inline define:vars={{ axeptioClientId: AXEPTIO_ID, axeptioCookiesVersion: locale === 'fr' ? 'toileblanche-fr' : 'toileblanche-en' }}>
+    window.axeptioSettings = {
+      clientId: axeptioClientId,
+      cookiesVersion: axeptioCookiesVersion,
+      googleConsentMode: {
+        default: {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          wait_for_update: 500
+        }
+      }
+    };
+
+    (function(d, s) {
+      if (d.querySelector('script[src*="axept"]') || window.axeptio) return;
+      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+      e.async = true;
+      e.src = "https://static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+
+    void 0 === window._axcb && (window._axcb = []);
+    window._axcb.push(function(axeptio) {
+      axeptio.on("cookies:complete", function(choices) {
+        var marketing = !!(choices && (choices.google_ads || choices.facebook_pixel));
+        if (typeof fbq === "function") {
+          if (marketing) {
+            fbq("consent", "grant");
+            fbq("track", "PageView");
+          } else {
+            fbq("consent", "revoke");
           }
         }
-      };
-
-      (function(d, s) {
-        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-        e.async = true; e.src = "//static.axept.io/sdk.js";
-        t.parentNode.insertBefore(e, t);
-      })(document, "script");
-
-      void 0 === window._axcb && (window._axcb = []);
-      window._axcb.push(function(axeptio) {
-        axeptio.on("cookies:complete", function(choices) {
-          var marketing = !!(choices && (choices.google_ads || choices.facebook_pixel));
-          if (typeof fbq === "function") {
-            if (marketing) {
-              fbq("consent", "grant");
-              fbq("track", "PageView");
-            } else {
-              fbq("consent", "revoke");
-            }
-          }
-        });
       });
-    </script>
-  ) : (
-    <script is:inline>
-      window.axeptioSettings = {
-        clientId: "63ce737f6a87883d8a3d1f79",
-        cookiesVersion: "toileblanche-en",
-        googleConsentMode: {
-          default: {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied",
-            wait_for_update: 500
-          }
-        }
-      };
-
-      (function(d, s) {
-        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-        e.async = true; e.src = "//static.axept.io/sdk.js";
-        t.parentNode.insertBefore(e, t);
-      })(document, "script");
-
-      void 0 === window._axcb && (window._axcb = []);
-      window._axcb.push(function(axeptio) {
-        axeptio.on("cookies:complete", function(choices) {
-          var marketing = !!(choices && (choices.google_ads || choices.facebook_pixel));
-          if (typeof fbq === "function") {
-            if (marketing) {
-              fbq("consent", "grant");
-              fbq("track", "PageView");
-            } else {
-              fbq("consent", "revoke");
-            }
-          }
-        });
-      });
-    </script>
-  )}
+    });
+  </script>
 
   <script is:inline>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
