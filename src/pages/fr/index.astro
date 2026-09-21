@@ -3,16 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import suitesData from '../../data/suites.fr.json';
+import { encodePath, srcset, srcsetAvif, srcsetWebp } from '../../utils/images';
 
 function cardBase(path: string) {
   return path.replace(/\.[^.]+$/, '');
 }
 
-function srcset(path: string, widths: number[]) {
-  const ext = path.substring(path.lastIndexOf('.'));
-  const base = path.substring(0, path.lastIndexOf('.'));
-  return widths.map(w => `${base}-${w}w${ext} ${w}w`).join(', ') + `, ${path} ${widths[widths.length - 1]! * 2}w`;
-}
+const CARD_WIDTHS = [400, 800, 1200, 1800];
+const AERTS_BASE = '/assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600';
 
 const suites = suitesData.suites.map(s => ({
   href: `/fr/suites/${s.slug}`,
@@ -94,12 +92,12 @@ const suites = suitesData.suites.map(s => ({
                   <div class="room-slide-image-container">
                     {suite.hasOptimized ? (
                     <picture>
-                      <source type="image/avif" srcset={`${suite.base}-400w.avif 400w, ${suite.base}-800w.avif 800w, ${suite.base}-1200w.avif 1200w, ${suite.base}-1800w.avif 1800w`} sizes="100vw" />
-                      <source type="image/webp" srcset={`${suite.base}-400w.webp 400w, ${suite.base}-800w.webp 800w, ${suite.base}-1200w.webp 1200w, ${suite.base}-1800w.webp 1800w`} sizes="100vw" />
-                      <img loading="lazy" alt={suite.alt} src={`${suite.base}-800w.jpg`} srcset={`${suite.base}-400w.jpg 400w, ${suite.base}-800w.jpg 800w, ${suite.base}-1200w.jpg 1200w, ${suite.base}-1800w.jpg 1800w`} sizes="100vw" class="room-slide-image" width="533" height="400" />
+                      <source type="image/avif" srcset={srcsetAvif(suite.image, CARD_WIDTHS)} sizes="100vw" />
+                      <source type="image/webp" srcset={srcsetWebp(suite.image, CARD_WIDTHS)} sizes="100vw" />
+                      <img loading="lazy" alt={suite.alt} src={encodePath(`${suite.base}-800w.jpg`)} srcset={srcset(suite.image, CARD_WIDTHS)} sizes="100vw" class="room-slide-image" width="533" height="400" />
                     </picture>
                   ) : (
-                    <img loading="lazy" alt={suite.alt} src={suite.image} srcset={srcset(suite.image, [400, 800, 1200])} sizes="100vw" class="room-slide-image" width="533" height="400" />
+                    <img loading="lazy" alt={suite.alt} src={encodePath(suite.image)} srcset={srcset(suite.image, [400, 800, 1200])} sizes="100vw" class="room-slide-image" width="533" height="400" />
                   )}
                   </div>
                 </div>
@@ -139,9 +137,9 @@ const suites = suitesData.suites.map(s => ({
           <div class="tb-feature-block-image">
             <a href="/fr/art" class="tb-feature-block-image-link">
               <picture>
-                <source type="image/avif" srcset="/assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-524w.avif 524w, /assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-800w.avif 800w" sizes="(max-width: 767px) 100vw, 524px" />
-                <source type="image/webp" srcset="/assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-524w.webp 524w, /assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-800w.webp 800w" sizes="(max-width: 767px) 100vw, 524px" />
-                <img src="/assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-524w.jpg" srcset="/assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-524w.jpg 524w, /assets/images/677ce5a0ffdffd79d9f89e13_Aerts 6 (1)-p-1600-800w.jpg 800w" sizes="(max-width: 767px) 100vw, 524px" alt="Art contemporain à Toile Blanche" width="524" height="654" loading="lazy" />
+                <source type="image/avif" srcset={`${encodePath(`${AERTS_BASE}-524w.avif`)} 524w, ${encodePath(`${AERTS_BASE}-800w.avif`)} 800w`} sizes="(max-width: 767px) 100vw, 524px" />
+                <source type="image/webp" srcset={`${encodePath(`${AERTS_BASE}-524w.webp`)} 524w, ${encodePath(`${AERTS_BASE}-800w.webp`)} 800w`} sizes="(max-width: 767px) 100vw, 524px" />
+                <img src={encodePath(`${AERTS_BASE}-524w.jpg`)} srcset={`${encodePath(`${AERTS_BASE}-524w.jpg`)} 524w, ${encodePath(`${AERTS_BASE}-800w.jpg`)} 800w`} sizes="(max-width: 767px) 100vw, 524px" alt="Art contemporain à Toile Blanche" width="524" height="654" loading="lazy" />
               </picture>
             </a>
           </div>

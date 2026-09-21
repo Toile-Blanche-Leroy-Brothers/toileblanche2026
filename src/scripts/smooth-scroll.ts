@@ -12,10 +12,7 @@ async function initLenis(): Promise<void> {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   try {
-    const [lenisMod] = await Promise.all([
-      import('lenis'),
-      import('lenis/dist/lenis.css'),
-    ]);
+    const lenisMod = await import('lenis');
     const Lenis = lenisMod.default;
 
     lenisInstance = new Lenis({
