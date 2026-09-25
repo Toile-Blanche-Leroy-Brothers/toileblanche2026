@@ -7,7 +7,7 @@
     },
     "chefs": ["Nicolas Leclair", "Melissa Giordano"],
     "philosophy": {
-      "fr": "Cuisine bistronomique toute en finesse. Tous les plats sont faits maison et mettent en valeur des ingrédients locaux de qualité.",
+      "fr": "Le chef Nicolas Leclair, la cheffe adjointe Melissa Giordano et leur équipe vous font découvrir une cuisine bistronomique toute en finesse. Tous les plats sont faits maison et mettent en valeur des ingrédients locaux de qualité, reflétant ainsi notre engagement envers la fraîcheur, le goût authentique et le soutien à la communauté locale.",
       "en": "Fine bistro cuisine. All dishes are homemade, featuring quality local ingredients."
     }
   },
@@ -23,7 +23,7 @@
             "en": "A leaf-by-leaf arrangement of multicoloured beetroot marinated in kalamansi vinegar, with ricotta, fried capers, grapefruit and hazelnut praline."
           },
           {
-            "fr": "Carpaccio de maigre, cœur de bœuf, pesto rosso, tomates cerise grillées, pickles de concombre et basilic.",
+            "fr": "Carpaccio de maigre, Coeur de boeuf, pesto rosso, tomates cerise grillées, pickles de concombre, et basilic.",
             "en": "Carpaccio of meagre, beefsteak tomatoes, red pesto, grilled cherry tomatoes, pickled cucumber and basil."
           }
         ]
@@ -61,7 +61,7 @@
       "title": { "fr": "Nos Entrées", "en": "Starters" },
       "items": [
         {
-          "fr": "Encornet farci \"blette-chorizo-moules\", la courgette du pays en écrasé, sumac, citron confit et écume marinière.",
+          "fr": "Encornet farci \"blette - chorizo - moules\" la courgette du pays en écrasé, sumac, citron confit et écume marinière.",
           "en": "Stuffed squid with \"chard, chorizo and mussels\", local zucchini purée, sumac, candied lemon and seafood foam.",
           "price": 29
         },
@@ -81,7 +81,7 @@
           "price": 27
         },
         {
-          "fr": "Carpaccio de maigre, cœur de bœuf, pesto rosso, tomates cerise grillées, pickles de concombre et basilic.",
+          "fr": "Carpaccio de maigre, Coeur de boeuf, pesto rosso, tomates cerise grillées, pickles de concombre, et basilic.",
           "en": "Carpaccio of meagre, beefsteak tomatoes, red pesto, grilled cherry tomatoes, pickled cucumber and basil.",
           "price": 28
         }
@@ -92,7 +92,7 @@
         "title": { "fr": "Vegan", "en": "Vegan" },
         "items": [
           {
-            "fr": "Légumes de saison rôtis, déclinés en différentes textures, pesto basilic.",
+            "fr": "Légumes de saison rôtis, déclinés en différentes textures, Pesto basilic.",
             "en": "Roasted seasonal vegetables in different textures, basil pesto.",
             "price": 24
           }
@@ -127,12 +127,12 @@
             "price": 39
           },
           {
-            "fr": "Filet de Bœuf Simmental, petite salade avec vinaigrette, frites maison au Parmesan et à l'huile de truffe. Sauce poivre vert ou jus de veau.",
+            "fr": "Filet de Boeuf Simmental, petite salade avec vinaigrette, frites maison au Parmesan et à l'huile de Truffe. Sauce poivre vert ou jus de veau.",
             "en": "Simmental beef fillet, small salad with vinaigrette, homemade fries with Parmesan and truffle oil. Green pepper sauce or veal gravy.",
             "price": 45
           },
           {
-            "fr": "Carré d'agneau des Alpilles, aubergine ronde grillée au BBQ, caponata \"traditionnelle\", panisse croustillante sésame-basilic.",
+            "fr": "Carré d'agneau des alpilles, aubergine ronde grillée au BBQ, caponatta \"traditionnelle\", panisse croustillante sésame - basilic.",
             "en": "Rack of lamb from the Alpilles, BBQ-grilled aubergine, traditional caponata, crispy panisse with sesame and basil.",
             "price": 41
           }
@@ -142,24 +142,24 @@
     "extras": {
       "title": { "fr": "Les Extras", "en": "Extras" },
       "items": [
-        { "fr": "Légumes de saison rôtis et pesto", "en": "Roasted seasonal vegetables with pesto", "price": 8 },
-        { "fr": "Pâtes au beurre, Parmesan et poivre noir", "en": "Pasta with butter, Parmesan and black pepper", "price": 8 },
-        { "fr": "Broccolinis au BBQ, citron", "en": "BBQ broccolinis, lemon", "price": 8 },
-        { "fr": "Salade vinaigrette", "en": "Salad with dressing", "price": 8 },
-        { "fr": "Panisse aux herbes de Provence", "en": "Panisse with Provençal herbs", "price": 8 },
-        { "fr": "Frites maison à l'huile de truffe et au parmesan", "en": "Homemade fries with truffle oil and Parmesan", "price": 8 }
+        { "fr": "Légumes de saison rôtis et Pesto.", "en": "Roasted seasonal vegetables with pesto", "price": 8 },
+        { "fr": "Pâtes au beurre, Parmesan et poivre noir.", "en": "Pasta with butter, Parmesan and black pepper", "price": 8 },
+        { "fr": "Broccolinis au BBQ, citron.", "en": "BBQ broccolinis, lemon", "price": 8 },
+        { "fr": "Salade vinaigrette.", "en": "Salad with dressing", "price": 8 },
+        { "fr": "Panisse aux herbes de Provence.", "en": "Panisse with Provençal herbs", "price": 8 },
+        { "fr": "Frites maison à l'huile de truffe et au parmesan.", "en": "Homemade fries with truffle oil and Parmesan", "price": 8 }
       ]
     },
     "desserts": {
       "title": { "fr": "Nos Desserts", "en": "Desserts" },
       "items": [
         {
-          "fr": "Sélection de fromages par la maison Mons (MOF) : Comté 24 mois, Langres, chèvre, Fourme d'Ambert.",
+          "fr": "Sélection de fromages par la maison Mons (MOF): Comté 24 mois, Langres, Chèvre, Fourme d'Ambert.",
           "en": "Selection of cheeses by Mons (MOF): Comté 24 months, Langres, goat cheese, Fourme d'Ambert.",
           "price": 17
         },
         {
-          "fr": "Chocolat Ocoa 70%, crumble aux amandes, crème glacée mascarpone, fleur de sel et réduction de balsamique.",
+          "fr": "Chocolat Ocoa 70% crumble aux amandes, crème glacée mascarpone, fleur de sel et réduction de balsamique.",
           "en": "Ocoa 70% chocolate crumble with almonds, mascarpone ice cream, fleur de sel, and balsamic reduction.",
           "price": 15
         },
@@ -169,12 +169,12 @@
           "price": 15
         },
         {
-          "fr": "Variation autour du pamplemousse : l'écorce confite, Apérol en fine gelée, sorbet et segment de pamplemousse, meringue verveine.",
+          "fr": "Variation autour du pamplemousse : l'écorce confit, Apérol en fine gelée, sorbet et segment de pamplemousse, meringue verveine.",
           "en": "Variation on grapefruit: candied peel, Aperol in fine jelly, grapefruit sorbet and segments, verbena meringue.",
           "price": 15
         },
         {
-          "fr": "Millefeuille de pomme façon tarte Tatin, caramel au beurre salé, crème végétale légèrement acidulée, Granny Smith au vinaigre de grenade.",
+          "fr": "Millefeuille de pomme façon tarte Tatin, caramel au beurre salé, crème végétale légèrement acidulé, Granny Smith au vinaigre de grenade.",
           "en": "Apple millefeuille, Tarte Tatin-style, with salted butter caramel, slightly tangy plant-based cream, and Granny Smith apples in pomegranate vinegar.",
           "price": 15
         }
@@ -183,11 +183,11 @@
   },
   "legal": {
     "meat_origins": {
-      "fr": "Origines des viandes : Agneau, volaille, veau : France / Bœuf : Allemagne / Chorizo : Espagne",
+      "fr": "Origines des viandes : Agneau, volaille, veau: France / Boeuf: Allemagne / Chorizo: Espagne",
       "en": "Meat origins: Lamb, poultry, veal: France / Beef: Germany / Chorizo: Spain"
     },
     "fish_origins": {
-      "fr": "Origines des poissons : Flétan (sauvage) Zone FAO Atlantique Nord-Est, maigre (élevé) France, poisson du jour (élevé) France, palourdes (élevé) France, moules (élevé) Espagne, encornets (sauvage) Zone FAO Atlantique Nord-Est",
+      "fr": "Origines des poissons : Flétan (sauvage) Zone FAO Atlantique Nord-Est, Maigre (élevé) France, Poisson du jour (élevé) France, Palourdes (élevé) France, Moules (élevé) Espagne, Encornets (sauvage) Zone FAO Atlantique Nord-Est",
       "en": "Fish origins: Halibut (wild) FAO Northeast Atlantic zone, meagre (farmed) France, fish of the day (farmed) France, clams (farmed) France, mussels (farmed) Spain, squid (wild) FAO Northeast Atlantic"
     },
     "allergy_note": {

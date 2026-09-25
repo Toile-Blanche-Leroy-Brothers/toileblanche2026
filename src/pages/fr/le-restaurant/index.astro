@@ -120,7 +120,7 @@ const t = useTranslations(lang);
         <!-- EXTRAS -->
         <div class="lrs-menu-section lrs-menu-extras">
           <h3>{menu.a_la_carte.extras.title[lang]}</h3>
-          <p class="lrs-extras-intro">Une touche de gourmandise pour accompagner votre plat, à savourer seul ou à partager.</p>
+          <p class="lrs-extras-intro">Tous nos plats sont servis pour ravir vos papilles. Pourquoi ne pas y ajouter une touche de gourmandise ? Découvrez nos extras pour agrémenter votre repas. A savourer seul ou à partager !</p>
           <div class="lrs-menu-extras-grid">
             {menu.a_la_carte.extras.items.map(item => (
               <div class="lrs-menu-item">
@@ -163,12 +163,14 @@ const t = useTranslations(lang);
           <p>Une galerie d'un autre genre. Chaque bouteille choisie comme on choisit une œuvre, pour ce qu'elle raconte.</p>
           <p>La carte parle d'abord la langue du Sud : Bellet sur les collines au-dessus de Nice, Cassis face au Cap Canaille, le Var de Cotignac à Bormes. Des vignerons que nous connaissons par leur nom. Puis les classiques, et quelques vieux flacons gardés pour le bon soir.</p>
           <p>Mettez-nous au défi. Nous aimons ça.</p>
+          {false && (
           <a href="/carte-des-vins.pdf" target="_blank" rel="noopener" class="lrs-menu-expand">
             <span class="lrs-menu-expand-text">Voir la carte des vins</span>
             <svg class="lrs-menu-expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </a>
+          )}
           <h2>Le soir</h2>
           <p>Dès que le temps le permet, le dîner se savoure en terrasse. La vue sur la vallée s'invite à table, comme un ingrédient en plus. En hiver, le service se tient en salle, dans une atmosphère plus intime.</p>
           <p>Ambiance décontractée, sans chichis. Juste une belle cuisine dans une lumière dorée.</p>
