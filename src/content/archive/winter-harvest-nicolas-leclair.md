@@ -12,7 +12,7 @@ lang: "en"
 
 ## The Season of Precision
 
-When the mistral clears the sky over Saint-Paul de Vence, the light at Toile Blanche becomes sharper, more forensic. For Chef Nicolas Leclair and his assistant Melissa Giordano, this shift in light signals a shift in the kitchen—a transition toward the concentrated flavors of the Provencal winter.
+When the mistral clears the sky over Saint-Paul de Vence, the light at Toile Blanche becomes sharper, more forensic. For Chef Nicolas Leclair, this shift in light signals a shift in the kitchen—a transition toward the concentrated flavors of the Provencal winter.
 
 ## The Bistronomy Sketch
 

@@ -17,7 +17,7 @@ This file follows the [llms.txt](https://llmstxt.org/) standard. A complete, pag
 - **Website:** https://www.toileblanche.com
 - **Scale:** 22 suites across 7 buildings; 2 restaurants; 3 shared pools + 4 private suite pools; 20,000 m² of Provençal gardens; contemporary art collection and sculpture trail
 - **Owners / artists:** Nicolas, Gilles, and Gregory Leroy (Leroy Brothers). Family presence on the property.
-- **Kitchen:** Chef Nicolas Leclair and Assistant Chef Melissa Giordano
+- **Kitchen:** Chef Nicolas Leclair
 - **Price range:** €€€€ (EUR)
 - **Check-in / check-out:** 16:00–20:00 / 08:00–11:00
 - **Reception:** 08:00–20:00 daily
@@ -58,7 +58,7 @@ Twenty-two suites across seven buildings. No two buildings the same. No two view
 Two tables worth travelling for. Menus built around what is in season, what is local, what is honest. The herb garden is twenty metres from the kitchen. Open to hotel guests and outside visitors. Wine list: [carte-des-vins.pdf](https://www.toileblanche.com/carte-des-vins.pdf). Menus change with the season; current dishes are in [llms-full.txt](https://www.toileblanche.com/llms-full.txt).
 
 - [Restaurants overview](https://www.toileblanche.com/restaurants)
-- [Le Restaurant](https://www.toileblanche.com/le-restaurant): dinner, year-round. Summer 19:00–22:00, winter 19:00–21:00. Fine bistro cuisine. Set menu Toile Blanche 71€. Chefs Nicolas Leclair and Melissa Giordano. Terrace when weather allows. Book: [Zenchef](https://bookings.zenchef.com/results?rid=357953&lang=en). Email restaurant@toileblanche.com. Instagram [@lerestaurant.toileblanche](https://www.instagram.com/lerestaurant.toileblanche/)
+- [Le Restaurant](https://www.toileblanche.com/le-restaurant): dinner, year-round. Summer 19:00–22:00, winter 19:00–21:00. Fine bistro cuisine. Set menu Toile Blanche 72€. Chef Nicolas Leclair. Terrace when weather allows. Book: [Zenchef](https://bookings.zenchef.com/results?rid=357953&lang=en). Email restaurant@toileblanche.com. Instagram [@lerestaurant.toileblanche](https://www.instagram.com/lerestaurant.toileblanche/)
 - [La Guinguette](https://www.toileblanche.com/la-guinguette): garden table under the plane trees beside the pool. Sharing plates, no rush. Lunch 12:00–15:00 year-round; summer drinks 15:00–18:00 and dinner 18:00–21:00. Barefoot welcome. Book: [Zenchef](https://bookings.zenchef.com/results?rid=375927&pid=1001&lang=en). Email guinguette@toileblanche.com. Instagram [@laguinguette.toileblanche](https://www.instagram.com/laguinguette.toileblanche/)
 - [Breakfast](https://www.toileblanche.com/breakfast): 08:00–10:30 in Le Restaurant. Included for two on every direct booking.
 

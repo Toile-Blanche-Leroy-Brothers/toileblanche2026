@@ -2,29 +2,29 @@
   "meta": {
     "restaurant": "Le Restaurant de Toile Blanche",
     "season": {
-      "fr": "Saison Estivale 2026",
-      "en": "Summer Season 2026"
+      "fr": "Hiver 2026/27",
+      "en": "Winter 2026/27"
     },
-    "chefs": ["Nicolas Leclair", "Melissa Giordano"],
+    "chefs": ["Nicolas Leclair"],
     "philosophy": {
-      "fr": "Le chef Nicolas Leclair, la cheffe adjointe Melissa Giordano et leur équipe vous font découvrir une cuisine bistronomique toute en finesse. Tous les plats sont faits maison et mettent en valeur des ingrédients locaux de qualité, reflétant ainsi notre engagement envers la fraîcheur, le goût authentique et le soutien à la communauté locale.",
-      "en": "Fine bistro cuisine. All dishes are homemade, featuring quality local ingredients."
+      "fr": "Une cuisine de saison, faite maison, avec les meilleurs produits de la région. Le chef Nicolas Leclair et son équipe cuisinent simple et juste : des plats qu'on a envie de retrouver.",
+      "en": "Seasonal, homemade cooking with the best produce from the region. Chef Nicolas Leclair and his team keep it simple and precise: dishes you'll want to come back for."
     }
   },
   "set_menu": {
     "title": "Toile Blanche",
-    "price": 71,
+    "price": 72,
     "courses": [
       {
         "type": { "fr": "Entrée", "en": "Starter" },
         "options": [
           {
-            "fr": "Feuille à feuille de betteraves multicolores marinées au vinaigre kalamansi, ricotta, câpres frites, pamplemousse et pralin noisette.",
-            "en": "A leaf-by-leaf arrangement of multicoloured beetroot marinated in kalamansi vinegar, with ricotta, fried capers, grapefruit and hazelnut praline."
+            "fr": "Foie gras de canard maison · butternut · vinaigre de cidre · dattes · brioche toastée",
+            "en": "Homemade duck foie gras · butternut squash · cider vinegar · dates · toasted brioche"
           },
           {
-            "fr": "Carpaccio de maigre, Coeur de boeuf, pesto rosso, tomates cerise grillées, pickles de concombre, et basilic.",
-            "en": "Carpaccio of meagre, beefsteak tomatoes, red pesto, grilled cherry tomatoes, pickled cucumber and basil."
+            "fr": "Saint-Jacques rôties · noisette · endive · orange · kumquat · topinambour",
+            "en": "Roasted scallops · hazelnut · endive · orange · kumquat · Jerusalem artichoke"
           }
         ]
       },
@@ -32,12 +32,12 @@
         "type": { "fr": "Plat", "en": "Main" },
         "options": [
           {
-            "fr": "Dos de flétan sauvage rôti aux épices trappeur, maïs grillé, pommes de terre mitraille, sauce grenobloise.",
-            "en": "Roasted wild halibut loin with \"Trappeur\" spices, grilled corn, baby potatoes, and Grenobloise sauce."
+            "fr": "Lotte rôtie · chou-fleur · brocoletti · romanesco · coriandre · curcuma",
+            "en": "Roasted monkfish · cauliflower · broccolini · romanesco · coriander · turmeric"
           },
           {
-            "fr": "Suprême de volaille fermière, conchiglioni farci en texture de sous-bois, condiment ail noir-cresson, jus de viande.",
-            "en": "Free-range chicken breast, conchiglioni stuffed with wild forest ingredients, black garlic and watercress sauce, gravy."
+            "fr": "Quasi de veau en tataki · carotte fane · olive noire · artichaut · oignon rouge · pois chiche",
+            "en": "Veal rump tataki · baby carrot · black olive · artichoke · red onion · chickpea"
           }
         ]
       },
@@ -45,12 +45,12 @@
         "type": { "fr": "Dessert", "en": "Dessert" },
         "options": [
           {
-            "fr": "Chocolat Ocoa 70%, crumble aux amandes, crème glacée mascarpone, fleur de sel et réduction de balsamique.",
-            "en": "Ocoa 70% chocolate, crumble with almonds, mascarpone ice cream, fleur de sel, and balsamic reduction."
+            "fr": "Tarte aux deux citrons · bergamote · amande · yuzu · meringue · citron vert",
+            "en": "Two-lemon tart · bergamot · almond · yuzu · meringue · lime"
           },
           {
-            "fr": "Tartare \"minute\" de nectarine et figues de Solliès, poivre timut, fine gavotte croustillante, sorbet pêche blanche.",
-            "en": "Nectarine and Solliès figs tartare, Timut pepper, thin crispy gavotte, white peach sorbet."
+            "fr": "Crémeux de châtaigne · romarin · confiture de marrons · glace fleur de lait · popcorn salé",
+            "en": "Chestnut cream · rosemary · chestnut jam · milk ice cream · salted popcorn"
           }
         ]
       }
@@ -61,39 +61,59 @@
       "title": { "fr": "Nos Entrées", "en": "Starters" },
       "items": [
         {
-          "fr": "Encornet farci \"blette - chorizo - moules\" la courgette du pays en écrasé, sumac, citron confit et écume marinière.",
-          "en": "Stuffed squid with \"chard, chorizo and mussels\", local zucchini purée, sumac, candied lemon and seafood foam.",
-          "price": 29
+          "fr": "Escargots du Var à la bourguignonne · 6 pièces · beurre d'ail et persil · à partager",
+          "en": "Snails from the Var, Burgundy style · 6 pieces · garlic and parsley butter · to share",
+          "price": 19
         },
         {
-          "fr": "6 escargots du Var à la bourguignonne.",
-          "en": "6 snails from the Var, Burgundy-style.",
-          "price": 23
-        },
-        {
-          "fr": "Feuille à feuille de betteraves multicolores marinées au vinaigre kalamansi, ricotta, câpres frites, pamplemousse et pralin noisette.",
-          "en": "A leaf-by-leaf arrangement of multicoloured beetroot marinated in kalamansi vinegar, with ricotta, fried capers, grapefruit and hazelnut praline.",
+          "fr": "Les petits farcis niçois",
+          "en": "Niçois stuffed vegetables",
           "price": 25
         },
         {
-          "fr": "Tartare de veau au couteau, artichaut poivrade en barigoule, parmesan, cœur de sucrine grillée, sauce tonnato.",
-          "en": "Knife-cut veal tartare, artichoke poivrade, Parmesan, grilled Sucrine, tonnato sauce.",
-          "price": 27
+          "fr": "Foie gras de canard maison · butternut · vinaigre de cidre · dattes · brioche toastée",
+          "en": "Homemade duck foie gras · butternut squash · cider vinegar · dates · toasted brioche",
+          "price": 29
         },
         {
-          "fr": "Carpaccio de maigre, Coeur de boeuf, pesto rosso, tomates cerise grillées, pickles de concombre, et basilic.",
-          "en": "Carpaccio of meagre, beefsteak tomatoes, red pesto, grilled cherry tomatoes, pickled cucumber and basil.",
-          "price": 28
+          "fr": "Betteraves multicolores · clémentine · kalamansi · macadamia · ricotta à l'aneth",
+          "en": "Heritage beetroot · clementine · calamansi · macadamia · dill ricotta",
+          "price": 21
+        },
+        {
+          "fr": "Œuf parfait bio fermier · champignons · oignons confits · mouillette · jambon des monts Lagast. Truffe noire râpée à table, en saison · supplément 18 €",
+          "en": "Organic free-range \"perfect\" egg · mushrooms · onion confit · toast soldier · Monts Lagast ham. Black truffle shaved at the table, in season · supplement €18",
+          "price": 24
+        },
+        {
+          "fr": "Saint-Jacques rôties · noisette · endive · orange · kumquat · topinambour",
+          "en": "Roasted scallops · hazelnut · endive · orange · kumquat · Jerusalem artichoke",
+          "price": 27
         }
       ]
     },
     "mains": {
-      "vegan": {
-        "title": { "fr": "Vegan", "en": "Vegan" },
+      "classics": {
+        "title": { "fr": "Les Classiques", "en": "Classics" },
         "items": [
           {
-            "fr": "Légumes de saison rôtis, déclinés en différentes textures, Pesto basilic.",
-            "en": "Roasted seasonal vegetables in different textures, basil pesto.",
+            "fr": "Filet de bœuf Simmental · frites maison · petite salade · sauce poivre vert ou jus de veau",
+            "en": "Simmental beef fillet · homemade fries · side salad · green peppercorn sauce or veal jus",
+            "price": 42
+          },
+          {
+            "fr": "Linguine de Gragnano au homard · beurre de salicorne · bisque de crustacés · citron confit",
+            "en": "Gragnano linguine with roasted lobster · samphire butter · shellfish bisque · candied lemon",
+            "price": 48
+          }
+        ]
+      },
+      "vegan": {
+        "title": { "fr": "Végétal", "en": "Vegan" },
+        "items": [
+          {
+            "fr": "Légumes de saison rôtis · pesto basilic",
+            "en": "Roasted seasonal vegetables · basil pesto",
             "price": 24
           }
         ]
@@ -102,19 +122,19 @@
         "title": { "fr": "La Mer", "en": "The Sea" },
         "items": [
           {
-            "fr": "Dos de flétan sauvage rôti aux épices trappeur, maïs grillé, pommes de terre mitraille, sauce grenobloise.",
-            "en": "Roasted wild halibut loin with \"Trappeur\" spices, grilled corn, baby potatoes, and Grenobloise sauce.",
-            "price": 41
-          },
-          {
-            "fr": "Maxi Spaghetti di Gragnano a la vongole, râpé de poutargue.",
-            "en": "Maxi Spaghetti di Gragnano, linguine with clams, topped with grated bottarga.",
+            "fr": "Lotte rôtie · chou-fleur · brocoletti · romanesco · coriandre · curcuma",
+            "en": "Roasted monkfish · cauliflower · broccolini · romanesco · coriander · turmeric",
             "price": 39
           },
           {
-            "fr": "Poisson du jour grillé, sauce vierge de saison, accompagnement au choix.",
-            "en": "Grilled fish of the day, seasonal virgin sauce, choice of side dishes.",
-            "price": 36
+            "fr": "Poulpe grillé · fregola sarda · trompettes de la mort · épinards · bisque de crustacés",
+            "en": "Grilled octopus · fregola sarda · black trumpet mushrooms · spinach · shellfish bisque",
+            "price": 42
+          },
+          {
+            "fr": "Filet de loup grillé · sauce vierge · garniture au choix",
+            "en": "Grilled sea bass fillet · sauce vierge · side of your choice",
+            "price": 38
           }
         ]
       },
@@ -122,19 +142,19 @@
         "title": { "fr": "La Terre", "en": "The Land" },
         "items": [
           {
-            "fr": "Suprême de volaille fermière, conchiglioni farci en texture de sous-bois, condiment ail noir-cresson, jus de viande.",
-            "en": "Free-range chicken breast, conchiglioni stuffed with wild forest ingredients, black garlic and watercress sauce, gravy.",
+            "fr": "Volaille fermière rôtie · jus · garniture au choix",
+            "en": "Roasted free-range chicken · jus · side of your choice",
+            "price": 34
+          },
+          {
+            "fr": "Quasi de veau en tataki · carotte fane · olive noire · artichaut · oignon rouge · pois chiche",
+            "en": "Veal rump tataki · baby carrot · black olive · artichoke · red onion · chickpea",
             "price": 39
           },
           {
-            "fr": "Filet de Boeuf Simmental, petite salade avec vinaigrette, frites maison au Parmesan et à l'huile de Truffe. Sauce poivre vert ou jus de veau.",
-            "en": "Simmental beef fillet, small salad with vinaigrette, homemade fries with Parmesan and truffle oil. Green pepper sauce or veal gravy.",
-            "price": 45
-          },
-          {
-            "fr": "Carré d'agneau des alpilles, aubergine ronde grillée au BBQ, caponatta \"traditionnelle\", panisse croustillante sésame - basilic.",
-            "en": "Rack of lamb from the Alpilles, BBQ-grilled aubergine, traditional caponata, crispy panisse with sesame and basil.",
-            "price": 41
+            "fr": "Pigeon de la Maison Miéral · rutabaga · salsifis · pickles de poire · sauce Périgueux",
+            "en": "Maison Miéral pigeon · swede · salsify · pickled pear · Périgueux sauce",
+            "price": 46
           }
         ]
       }
@@ -142,56 +162,71 @@
     "extras": {
       "title": { "fr": "Les Extras", "en": "Extras" },
       "items": [
-        { "fr": "Légumes de saison rôtis et Pesto.", "en": "Roasted seasonal vegetables with pesto", "price": 8 },
-        { "fr": "Pâtes au beurre, Parmesan et poivre noir.", "en": "Pasta with butter, Parmesan and black pepper", "price": 8 },
-        { "fr": "Broccolinis au BBQ, citron.", "en": "BBQ broccolinis, lemon", "price": 8 },
-        { "fr": "Salade vinaigrette.", "en": "Salad with dressing", "price": 8 },
-        { "fr": "Panisse aux herbes de Provence.", "en": "Panisse with Provençal herbs", "price": 8 },
-        { "fr": "Frites maison à l'huile de truffe et au parmesan.", "en": "Homemade fries with truffle oil and Parmesan", "price": 8 }
+        { "fr": "Frites maison", "en": "Homemade fries", "price": 8 },
+        { "fr": "Panisse aux herbes de Provence", "en": "Panisse with Provençal herbs", "price": 8 },
+        { "fr": "Pâtes au beurre, parmesan et poivre", "en": "Pasta with butter, parmesan and pepper", "price": 8 },
+        { "fr": "Broccolinis au barbecue, citron", "en": "Barbecued broccolini, lemon", "price": 8 },
+        { "fr": "Légumes rôtis et pesto", "en": "Roasted vegetables and pesto", "price": 8 },
+        { "fr": "Salade, vinaigrette", "en": "Side salad, vinaigrette", "price": 8 },
+        {
+          "fr": "Truffe noire râpée sur les frites, en saison · supplément",
+          "en": "Black truffle shaved over the fries, in season · supplement",
+          "price": 10
+        },
+        {
+          "fr": "Pour les plus jeunes : pâtes au beurre ou volaille et frites maison",
+          "en": "For our younger guests: buttered pasta or chicken with homemade fries",
+          "price": 16
+        }
       ]
     },
     "desserts": {
       "title": { "fr": "Nos Desserts", "en": "Desserts" },
       "items": [
         {
-          "fr": "Sélection de fromages par la maison Mons (MOF): Comté 24 mois, Langres, Chèvre, Fourme d'Ambert.",
-          "en": "Selection of cheeses by Mons (MOF): Comté 24 months, Langres, goat cheese, Fourme d'Ambert.",
-          "price": 17
+          "fr": "Sélection de la Maison Mons, MOF · comté 24 mois · langres · chèvre · fourme d'Ambert",
+          "en": "Cheese selection by Maison Mons, MOF · 24-month Comté · Langres · goat cheese · Fourme d'Ambert",
+          "price": 16
         },
         {
-          "fr": "Chocolat Ocoa 70% crumble aux amandes, crème glacée mascarpone, fleur de sel et réduction de balsamique.",
-          "en": "Ocoa 70% chocolate crumble with almonds, mascarpone ice cream, fleur de sel, and balsamic reduction.",
-          "price": 15
+          "fr": "La jatte du moment, servie à votre table. Selon l'envie du chef : mousse au chocolat, tiramisu, riz au lait à la cassonade…",
+          "en": "The bowl of the moment, served at your table. As the chef fancies: chocolate mousse, tiramisu, rice pudding with brown sugar…",
+          "price": 11
         },
         {
-          "fr": "Tartare \"minute\" de nectarine et figues de Solliès, poivre timut, fine gavotte croustillante, sorbet pêche blanche.",
-          "en": "Nectarine and Solliès figs tartare, Timut pepper, thin crispy gavotte, white peach sorbet.",
-          "price": 15
+          "fr": "Tarte aux deux citrons · bergamote · amande · yuzu · meringue · citron vert",
+          "en": "Two-lemon tart · bergamot · almond · yuzu · meringue · lime",
+          "price": 13
         },
         {
-          "fr": "Variation autour du pamplemousse : l'écorce confit, Apérol en fine gelée, sorbet et segment de pamplemousse, meringue verveine.",
-          "en": "Variation on grapefruit: candied peel, Aperol in fine jelly, grapefruit sorbet and segments, verbena meringue.",
-          "price": 15
+          "fr": "Poire pochée au vin épicé · chocolat Ocoa 70 % · grenade · balsamique",
+          "en": "Pear poached in spiced wine · Ocoa 70% chocolate · pomegranate · balsamic",
+          "price": 13
         },
         {
-          "fr": "Millefeuille de pomme façon tarte Tatin, caramel au beurre salé, crème végétale légèrement acidulé, Granny Smith au vinaigre de grenade.",
-          "en": "Apple millefeuille, Tarte Tatin-style, with salted butter caramel, slightly tangy plant-based cream, and Granny Smith apples in pomegranate vinegar.",
-          "price": 15
+          "fr": "Crémeux de châtaigne · romarin · confiture de marrons · glace fleur de lait · popcorn salé",
+          "en": "Chestnut cream · rosemary · chestnut jam · milk ice cream · salted popcorn",
+          "price": 13
+        },
+        {
+          "fr": "Le café de la jatte : un espresso et une cuillère de la jatte du moment",
+          "en": "Espresso with a spoonful of the bowl of the moment",
+          "price": 9
         }
       ]
     }
   },
   "legal": {
     "meat_origins": {
-      "fr": "Origines des viandes : Agneau, volaille, veau: France / Boeuf: Allemagne / Chorizo: Espagne",
-      "en": "Meat origins: Lamb, poultry, veal: France / Beef: Germany / Chorizo: Spain"
+      "fr": "Origine des viandes : bœuf, Allemagne · veau, volaille, pigeon et porc, France",
+      "en": "Meat origins: beef, Germany · veal, chicken, pigeon and pork, France"
     },
     "fish_origins": {
-      "fr": "Origines des poissons : Flétan (sauvage) Zone FAO Atlantique Nord-Est, Maigre (élevé) France, Poisson du jour (élevé) France, Palourdes (élevé) France, Moules (élevé) Espagne, Encornets (sauvage) Zone FAO Atlantique Nord-Est",
-      "en": "Fish origins: Halibut (wild) FAO Northeast Atlantic zone, meagre (farmed) France, fish of the day (farmed) France, clams (farmed) France, mussels (farmed) Spain, squid (wild) FAO Northeast Atlantic"
+      "fr": "Origine des poissons et coquillages : lotte, Saint-Jacques et homard, Atlantique · poulpe, Méditerranée · loup (élevage), Méditerranée",
+      "en": "Fish and shellfish origins: monkfish, scallops and lobster, Atlantic · octopus, Mediterranean · sea bass (farmed), Mediterranean"
     },
     "allergy_note": {
-      "fr": "En cas d'allergies ou d'intolérances, merci de nous en informer. La liste complète des allergènes est disponible sur demande.",
+      "fr": "En cas d'allergie ou d'intolérance, merci de nous en informer. La liste complète des allergènes est disponible sur demande.",
       "en": "If you have any allergies or intolerances, please let us know. The full list of allergens is available upon request."
     }
   }

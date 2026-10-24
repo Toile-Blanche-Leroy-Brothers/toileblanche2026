@@ -2,180 +2,180 @@
   "meta": {
     "restaurant": "La Guinguette de Toile Blanche",
     "season": {
-      "fr": "Été 2026",
-      "en": "Summer 2026"
+      "fr": "Hiver 2026-27",
+      "en": "Winter 2026-27"
     },
     "philosophy": {
-      "fr": "La Méditerranée s'invite à votre table ! Choisissez vos plats préférés, ils seront servis en milieu de table pour que tous les convives puissent se régaler.",
-      "en": "The Mediterranean invites itself to your table! Choose your favourite dishes, which will be served centre-on the table so everyone can enjoy their meal."
+      "fr": "Bar à hors d'œuvre autour de la piscine · 7 jours sur 7 · de 12h à 14h. 4 à 5 plats pour deux, servis au centre de la table, au fur et à mesure. Encore une petite faim ? Faites signe.",
+      "en": "Hors d'oeuvre bar around the pool · 7 days a week · noon to 2 pm. 4 to 5 dishes for two, served in the middle of the table, as they come. Still peckish? Just let us know."
     }
   },
   "sections": [
     {
-      "id": "salty",
-      "title": { "fr": "Salé", "en": "Savoury" },
+      "id": "nibble",
+      "title": { "fr": "À grignoter", "en": "To nibble" },
       "items": [
         {
-          "fr": "Jambon de Bayonne « Domaine Abotia »",
-          "en": "Bayonne ham « Domaine Abotia »",
-          "price": 16
-        },
-        {
-          "fr": "Saucisson fermier, « Maison Targe », pickles de légumes",
-          "en": "Farmhouse sausage « Maison Targe », vegetable pickles",
-          "price": 12
-        },
-        {
-          "fr": "Sardines à l'huile d'olive « Made in Provence » Maison FERRIGNO",
-          "en": "Sardines in olive oil « Made in Provence » Maison FERRIGNO",
-          "price": 12
+          "fr": "Frites maison",
+          "en": "Homemade fries",
+          "price": 9
         },
         {
           "fr": "Focaccia façon pissaladière, anchoïade et olives taggiasche",
-          "en": "Pissaladière-style focaccia, anchovy paste and Taggiasca olives",
+          "en": "Pissaladière-style focaccia, anchoïade, Taggiasca olives",
           "price": 13
         },
         {
-          "fr": "Beignets de fleurs de courgettes, pesto tomate basilic",
-          "en": "Zucchini flower fritters, tomato-basil pesto",
-          "price": 16
+          "fr": "Frites de panisse à l'origan",
+          "en": "Panisse fries with oregano",
+          "price": 11
         },
         {
-          "fr": "Poivrons grillés à l'huile d'olive, filets d'anchois, ail confit, olives taggiasche",
-          "en": "Grilled peppers with olive oil, anchovy fillets, confit garlic, Taggiasca olives",
-          "price": 15
-        },
-        {
-          "fr": "Frites de panisse à l'origan, pesto tomate maison",
-          "en": "Panisse fries with oregano, homemade tomato pesto",
+          "fr": "Sardines à l'huile d'olive « Made in Provence » Maison Ferrigno",
+          "en": "Sardines in olive oil \"Made in Provence\", Maison Ferrigno",
           "price": 12
         },
         {
-          "fr": "Burrata artisanale, tomate « cœur de bœuf », nectarine",
-          "en": "Artisanal burrata, « Coeur de boeuf » tomato and nectarine",
+          "fr": "Jambon à la truffe de la maison « Bobosse », pickles et cornichons",
+          "en": "Truffle ham from the house of \"Bobosse\", pickles and gherkins",
           "price": 17
-        },
+        }
+      ]
+    },
+    {
+      "id": "garden",
+      "title": { "fr": "Du jardin", "en": "From the garden" },
+      "items": [
         {
-          "fr": "Taboulé méditerranéen au citron confit, concombre, tomate",
-          "en": "Mediterranean tabbouleh with preserved lemon, cucumber, tomato",
-          "price": 15
-        },
-        {
-          "fr": "Bol de mesclun niçois, pignons grillés, huile d'olive « Maison Lucangeli »",
-          "en": "Niçois mesclun salad, toasted pine nuts, « Maison Lucangeli » olive oil",
-          "price": 9
-        },
-        {
-          "fr": "Tranche de pastèque, feta, grenade, basilic",
-          "en": "Slice of watermelon, feta, pomegranate and balsamico",
-          "price": 12
-        },
-        {
-          "fr": "Salade Niçoise, Tataki de thon rouge, artichauts, cébette",
-          "en": "Niçoise salad with red tuna tataki, artichokes, spring onion",
-          "price": 18
-        },
-        {
-          "fr": "Les Petits farcis Niçois (3 pièces), l'incontournable",
-          "en": "Les Petits farcis Niçois (3 stuffed vegetables), the classic",
-          "price": 15
-        },
-        {
-          "fr": "Le traditionnel Pan Bagnat (servi en bouchées)",
-          "en": "Traditional Pan Bagnat (served as sharing bites)",
+          "fr": "Carpaccio de betteraves, clémentine, kalamansi, praliné, ricotta à l'aneth",
+          "en": "Beetroot carpaccio, clementine, calamansi, praline, dill ricotta",
           "price": 14
         },
         {
-          "fr": "La « pêche du jour » en gravlax, guacamole d'avocat, passion",
-          "en": "Catch of the day gravlax, avocado guacamole, passion fruit",
+          "fr": "Légumes de saison grillés, confit de courge, vinaigrette à la tapenade noire",
+          "en": "Grilled seasonal vegetables, squash confit, black tapenade vinaigrette",
+          "price": 14
+        },
+        {
+          "fr": "La soupe du moment",
+          "en": "Soup of the moment",
+          "price": 11
+        }
+      ]
+    },
+    {
+      "id": "classics",
+      "title": { "fr": "Les incontournables", "en": "The classics" },
+      "items": [
+        {
+          "fr": "Les petits farcis niçois (3 pièces)",
+          "en": "Les petits farcis niçois (3 stuffed vegetables)",
+          "price": 15
+        },
+        {
+          "fr": "Escargots du Var à la bourguignonne (6 pièces)",
+          "en": "Var snails, garlic and parsley butter (6 pieces)",
           "price": 19
         },
         {
-          "fr": "Carpaccio de poulpe, marinade citron-xérès-sumac, roquette",
-          "en": "Octopus carpaccio, lemon, sherry and sumac marinade, arugula",
-          "price": 23
+          "fr": "Foie gras de canard « maison » mi-cuit, butternut confite, brioche toastée",
+          "en": "Homemade duck foie gras mi-cuit, candied butternut, toasted brioche",
+          "price": 21
+        }
+      ]
+    },
+    {
+      "id": "sea",
+      "title": { "fr": "De la mer", "en": "From the sea" },
+      "items": [
+        {
+          "fr": "Lotte rôtie, trilogie de chou en persillade, émulsion coriandre-curcuma",
+          "en": "Roasted monkfish, trio of cabbage with persillade, coriander-turmeric emulsion",
+          "price": 22
         },
         {
-          "fr": "Pescaito fritto, tarama maison aux épices zaatar",
-          "en": "Fried pescaito, house tarama with zaatar spices",
-          "price": 18
-        },
-        {
-          "fr": "Noix de veau Vitello Tonnato, câpres, oignons rouges, roquette",
-          "en": "Veal Vitello Tonnato, capers, red onions, arugula",
+          "fr": "Noix de Saint-Jacques rôties, endives braisées à l'orange, écume chaude de topinambour (3 pièces)",
+          "en": "Roasted scallops, orange-braised endive, warm Jerusalem artichoke foam (3 pieces)",
           "price": 21
         },
         {
-          "fr": "Gambas à la plancha (4 pièces), citron vert, basilic",
-          "en": "Grilled prawns (4 pieces), lime, basil",
+          "fr": "Tentacule de poulpe grillé, rouille, risotto de fregola sarda lié à la bisque de crustacés",
+          "en": "Grilled octopus tentacle, rouille, fregola sarda risotto with shellfish bisque",
           "price": 24
+        }
+      ]
+    },
+    {
+      "id": "land",
+      "title": { "fr": "De la terre", "en": "From the land" },
+      "items": [
+        {
+          "fr": "Daube de bœuf à la niçoise, courge, salsifis et pommes de terre grenaille",
+          "en": "Niçoise beef daube, squash, salsify and baby potatoes",
+          "price": 22
         },
         {
-          "fr": "Picanha de cochon à la plancha, marinade soja & sésame",
-          "en": "Grilled pork picanha, soy & sesame marinade",
-          "price": 20
-        },
-        {
-          "fr": "Carré d'agneau grillé (4 côtes), épices cajun, ail confit",
-          "en": "Grilled rack of lamb (4 chops), Cajun spices, confit garlic",
-          "price": 28
-        },
-        {
-          "fr": "Patatas bravas",
-          "en": "Patatas bravas, spicy potatoes",
-          "price": 9
-        },
-        {
-          "fr": "Menu enfant : nuggets / patatas bravas + glace enfant (vanille, citron ou chocolat)",
-          "en": "Children's meal: chicken nuggets / patatas bravas + ice cream (vanilla, lemon or chocolate)",
-          "price": 14
+          "fr": "Picanha de cochon en tataki, vierge automnale carotte, artichaut, oignons rouges et roquette",
+          "en": "Pork picanha tataki, autumn vierge of carrot, artichoke, red onion and rocket",
+          "price": 19
         }
       ]
     },
     {
       "id": "sweet",
-      "title": { "fr": "Sucré", "en": "Sweet" },
+      "title": { "fr": "Fromage et sucré", "en": "Cheese and sweet" },
       "items": [
         {
-          "fr": "Gaspacho de fruit, citron, basilic",
-          "en": "Fruit gazpacho, lemon, basil",
+          "fr": "Sélection de fromages par la Maison Mons (MOF)",
+          "en": "Cheese selection by Maison Mons (MOF)",
+          "price": 16
+        },
+        {
+          "fr": "Crème citron, crumble aux amandes, yuzu et citron vert",
+          "en": "Lemon cream, almond crumble, yuzu and lime",
           "price": 9
         },
         {
-          "fr": "Chocolat Ocoa 70%, crumble cacao, fleur de sel",
-          "en": "Ocoa 70% chocolate, cocoa crumble, fleur de sel",
-          "price": 12
-        },
-        {
-          "fr": "Fougassette maison, mascarpone, fruits rouges",
-          "en": "Homemade fougassette, mascarpone, red berries",
+          "fr": "Chocolat Ocoa 70 %, huile d'olive, fleur de sel et crème balsamique noire",
+          "en": "Ocoa 70% chocolate, olive oil, fleur de sel and black balsamic cream",
           "price": 9
         },
         {
-          "fr": "Tranche de clafoutis maison aux fruits de saison",
-          "en": "Slice of homemade seasonal fruit clafoutis",
+          "fr": "Dame blanche, glace vanille, chantilly, pralin",
+          "en": "Dame blanche: vanilla ice cream, whipped cream, praline",
           "price": 9
         },
         {
-          "fr": "Coupe sorbets (mangue, ananas, citron)",
-          "en": "Sorbet cup (mango, passion fruit, lemon)",
+          "fr": "Café affogato",
+          "en": "Café affogato",
           "price": 9
+        }
+      ]
+    },
+    {
+      "id": "formule",
+      "title": { "fr": "Formules", "en": "Set menus" },
+      "items": [
+        {
+          "fr": "Formule de la semaine (voir l'ardoise) · entrée et plat ou plat et dessert",
+          "en": "Set menu of the week (see the board) · starter and main or main and dessert",
+          "price": 31
         },
         {
-          "fr": "Coupe colonel citron vodka",
-          "en": "Colonel cup (lemon sorbet, vodka)",
-          "price": 12
+          "fr": "Formule de la semaine (voir l'ardoise) · entrée, plat et dessert",
+          "en": "Set menu of the week (see the board) · starter, main and dessert",
+          "price": 39
         },
         {
-          "fr": "Coupe Affogato (expresso over gelato)",
-          "en": "Affogato cup (espresso poured over ice cream)",
-          "price": 9
+          "fr": "Menu enfant · poisson du jour et frites maison + glace (vanille, citron ou chocolat)",
+          "en": "Kids' menu · catch of the day and homemade fries + ice cream (vanilla, lemon or chocolate)",
+          "price": 14
         }
       ]
     }
   ],
   "footer_note": {
-    "fr": "Prix et service compris. Origine de toutes les viandes : UE.",
-    "en": "Price and service included. Origin of all meats: EU."
+    "fr": "Prix et service compris. Origine de toutes les viandes : UE. Liste des allergènes sur demande.",
+    "en": "Prices include service. All meat of EU origin. Allergen information on request."
   }
 }
