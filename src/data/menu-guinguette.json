@@ -6,30 +6,15 @@
       "en": "Winter 2026-27"
     },
     "philosophy": {
-      "fr": "Bar à hors d'œuvre autour de la piscine · 7 jours sur 7 · de 12h à 14h. 4 à 5 plats pour deux, servis au centre de la table, au fur et à mesure. Encore une petite faim ? Faites signe.",
-      "en": "Hors d'oeuvre bar around the pool · 7 days a week · noon to 2 pm. 4 to 5 dishes for two, served in the middle of the table, as they come. Still peckish? Just let us know."
+      "fr": "Bar à hors d'œuvre autour de la piscine de Toile Blanche · 7 jours sur 7 · de 12h à 14h. Tout se partage, servi au centre de la table. 4 à 5 assiettes pour deux, au fur et à mesure.",
+      "en": "Hors d'oeuvre bar around the pool at Toile Blanche · 7 days a week · noon to 2 pm. Everything is shared, served in the middle of the table. 4 to 5 plates for two, as they come."
     }
   },
   "sections": [
     {
-      "id": "nibble",
-      "title": { "fr": "À grignoter", "en": "To nibble" },
+      "id": "share",
+      "title": { "fr": "À partager", "en": "To share" },
       "items": [
-        {
-          "fr": "Frites maison",
-          "en": "Homemade fries",
-          "price": 9
-        },
-        {
-          "fr": "Focaccia façon pissaladière, anchoïade et olives taggiasche",
-          "en": "Pissaladière-style focaccia, anchoïade, Taggiasca olives",
-          "price": 13
-        },
-        {
-          "fr": "Frites de panisse à l'origan",
-          "en": "Panisse fries with oregano",
-          "price": 11
-        },
         {
           "fr": "Sardines à l'huile d'olive « Made in Provence » Maison Ferrigno",
           "en": "Sardines in olive oil \"Made in Provence\", Maison Ferrigno",
@@ -39,34 +24,27 @@
           "fr": "Jambon à la truffe de la maison « Bobosse », pickles et cornichons",
           "en": "Truffle ham from the house of \"Bobosse\", pickles and gherkins",
           "price": 17
-        }
-      ]
-    },
-    {
-      "id": "garden",
-      "title": { "fr": "Du jardin", "en": "From the garden" },
-      "items": [
+        },
         {
           "fr": "Carpaccio de betteraves, clémentine, kalamansi, praliné, ricotta à l'aneth",
           "en": "Beetroot carpaccio, clementine, calamansi, praline, dill ricotta",
           "price": 14
         },
         {
-          "fr": "Légumes de saison grillés, confit de courge, vinaigrette à la tapenade noire",
-          "en": "Grilled seasonal vegetables, squash confit, black tapenade vinaigrette",
+          "fr": "Taboulé méditerranéen, citron confit, concombre, pruneaux, grenade et coriandre fraîche",
+          "en": "Mediterranean tabbouleh, preserved lemon, cucumber, prunes, pomegranate and fresh coriander",
           "price": 14
         },
         {
-          "fr": "La soupe du moment",
-          "en": "Soup of the moment",
-          "price": 11
-        }
-      ]
-    },
-    {
-      "id": "classics",
-      "title": { "fr": "Les incontournables", "en": "The classics" },
-      "items": [
+          "fr": "Foie gras de canard « maison » mi-cuit, butternut confite, brioche toastée",
+          "en": "Homemade duck foie gras mi-cuit, candied butternut, toasted brioche",
+          "price": 21
+        },
+        {
+          "fr": "Focaccia façon pissaladière, anchoïade et olives taggiasche",
+          "en": "Pissaladière-style focaccia, anchoïade, Taggiasca olives",
+          "price": 13
+        },
         {
           "fr": "Les petits farcis niçois (3 pièces)",
           "en": "Les petits farcis niçois (3 stuffed vegetables)",
@@ -78,46 +56,49 @@
           "price": 19
         },
         {
-          "fr": "Foie gras de canard « maison » mi-cuit, butternut confite, brioche toastée",
-          "en": "Homemade duck foie gras mi-cuit, candied butternut, toasted brioche",
-          "price": 21
-        }
-      ]
-    },
-    {
-      "id": "sea",
-      "title": { "fr": "De la mer", "en": "From the sea" },
-      "items": [
+          "fr": "Légumes de saison grillés, confit de courge, vinaigrette à la tapenade noire",
+          "en": "Grilled seasonal vegetables, squash confit, black tapenade vinaigrette",
+          "price": 14
+        },
         {
-          "fr": "Lotte rôtie, trilogie de chou en persillade, émulsion coriandre-curcuma",
-          "en": "Roasted monkfish, trio of cabbage with persillade, coriander-turmeric emulsion",
+          "fr": "Frites belges maison, double cuisson, mayonnaise maison",
+          "en": "Belgian fries, twice-cooked, homemade mayonnaise",
+          "price": 9
+        },
+        {
+          "fr": "Frites de panisse à l'origan",
+          "en": "Panisse fries with oregano",
+          "price": 11
+        },
+        {
+          "fr": "Queue de lotte grillée, brocolis, chou kale, émulsion coriandre-curcuma",
+          "en": "Grilled monkfish tail, broccoli, kale, coriander-turmeric emulsion",
+          "price": 27
+        },
+        {
+          "fr": "Noix de Saint-Jacques rôties, épinards, kumquat, noisette grillée",
+          "en": "Roasted scallops, spinach, kumquat, toasted hazelnut",
+          "price": 21
+        },
+        {
+          "fr": "Tentacule de poulpe grillé, rouille, potimarron, gomasio au sésame noir",
+          "en": "Grilled octopus tentacle, rouille, red kuri squash, black sesame gomasio",
           "price": 22
         },
         {
-          "fr": "Noix de Saint-Jacques rôties, endives braisées à l'orange, écume chaude de topinambour (3 pièces)",
-          "en": "Roasted scallops, orange-braised endive, warm Jerusalem artichoke foam (3 pieces)",
-          "price": 21
+          "fr": "Suprême et cuisse de volaille fermière, sauge, panais, choux de Bruxelles, lard de Colonnata",
+          "en": "Farm chicken supreme and thigh, sage, parsnip, Brussels sprouts, Colonnata lardo",
+          "price": 23
         },
         {
-          "fr": "Tentacule de poulpe grillé, rouille, risotto de fregola sarda lié à la bisque de crustacés",
-          "en": "Grilled octopus tentacle, rouille, fregola sarda risotto with shellfish bisque",
-          "price": 24
-        }
-      ]
-    },
-    {
-      "id": "land",
-      "title": { "fr": "De la terre", "en": "From the land" },
-      "items": [
+          "fr": "Picanha de cochon en tataki, vierge automnale carotte, artichaut, olives, oignons rouges",
+          "en": "Pork picanha tataki, autumn vierge of carrot, artichoke, olives and red onion",
+          "price": 23
+        },
         {
-          "fr": "Daube de bœuf à la niçoise, courge, salsifis et pommes de terre grenaille",
-          "en": "Niçoise beef daube, squash, salsify and baby potatoes",
+          "fr": "Daube de bœuf à la niçoise, courge et salsifis",
+          "en": "Niçoise beef daube, squash and salsify",
           "price": 22
-        },
-        {
-          "fr": "Picanha de cochon en tataki, vierge automnale carotte, artichaut, oignons rouges et roquette",
-          "en": "Pork picanha tataki, autumn vierge of carrot, artichoke, red onion and rocket",
-          "price": 19
         }
       ]
     },
@@ -153,22 +134,20 @@
       ]
     },
     {
-      "id": "formule",
-      "title": { "fr": "Formules", "en": "Set menus" },
+      "id": "suggestions",
+      "title": {
+        "fr": "Les suggestions de la semaine, voir l'ardoise",
+        "en": "Suggestions of the week, see the board"
+      },
+      "items": []
+    },
+    {
+      "id": "enfant",
+      "title": { "fr": "Menu enfant", "en": "Kids' menu" },
       "items": [
         {
-          "fr": "Formule de la semaine (voir l'ardoise) · entrée et plat ou plat et dessert",
-          "en": "Set menu of the week (see the board) · starter and main or main and dessert",
-          "price": 31
-        },
-        {
-          "fr": "Formule de la semaine (voir l'ardoise) · entrée, plat et dessert",
-          "en": "Set menu of the week (see the board) · starter, main and dessert",
-          "price": 39
-        },
-        {
-          "fr": "Menu enfant · poisson du jour et frites maison + glace (vanille, citron ou chocolat)",
-          "en": "Kids' menu · catch of the day and homemade fries + ice cream (vanilla, lemon or chocolate)",
+          "fr": "Nuggets de poulet ou poisson du jour, frites maison + glace (vanille, citron ou chocolat)",
+          "en": "Chicken nuggets or catch of the day, homemade fries + ice cream (vanilla, lemon or chocolate)",
           "price": 14
         }
       ]
