@@ -1,0 +1,584 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import type { Locale } from '../i18n/index';
+import { localePath } from '../i18n/index';
+import { getLesFetesCopy, lesFetesContact, lesFetesPdf } from '../data/les-fetes';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const c = getLesFetesCopy(locale);
+const fr = locale === 'fr';
+const sketch = {
+  cover: fr
+    ? 'Dessin d’un peintre au béret devant un sapin de Noël'
+    : 'Sketch of a painter in a beret at work on a Christmas tree',
+  barNight: fr
+    ? 'Dessin d’un peintre levant un verre devant un ciel de nuit'
+    : 'Sketch of a painter raising a glass before a night sky',
+  bar: fr
+    ? 'Dessin du bar d’hiver, avec guirlandes, champagne et huîtres'
+    : 'Sketch of the winter bar, with garlands, champagne and oysters',
+  tables: fr
+    ? 'Dessin d’un peintre devant une nature morte, bouteille et pain'
+    : 'Sketch of a painter at a still life, a bottle and a loaf',
+  takeaway: fr
+    ? 'Dessin d’un peintre emportant une toile, un chevalet plié à côté'
+    : 'Sketch of a painter carrying a canvas, a folded easel beside them',
+  foie: fr
+    ? 'Dessin d’un foie gras au torchon sur une planche'
+    : 'Sketch of foie gras au torchon on a board',
+  gifts: fr
+    ? 'Dessin d’un peintre devant une toile emballée comme un cadeau'
+    : 'Sketch of a painter beside a canvas wrapped as a gift',
+};
+const canonical = new URL(localePath('/les-fetes', locale), 'https://www.toileblanche.com').href;
+const giftHref = localePath('/gift-vouchers', locale);
+const winterHref = localePath('/l-hiver', locale);
+
+const eventsJson = {
+  '@context': 'https://schema.org',
+  '@graph': c.events.map((event) => ({
+    '@type': 'Event',
+    name: event.name,
+    startDate: event.startDate,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    description: event.description,
+    location: {
+      '@type': 'Place',
+      name: 'Toile Blanche',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '826 chemin de la Pounchounière',
+        addressLocality: 'Saint-Paul-de-Vence',
+        postalCode: '06570',
+        addressCountry: 'FR',
+      },
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Toile Blanche',
+      telephone: lesFetesContact.tel,
+      email: lesFetesContact.email,
+    },
+    ...(event.price
+      ? {
+          offers: {
+            '@type': 'Offer',
+            price: event.price,
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+            url: canonical,
+          },
+        }
+      : {}),
+  })),
+};
+---
+
+<Layout
+  locale={locale}
+  title={c.metaTitle}
+  description={c.metaDescription}
+  canonicalURL={canonical}
+  ogImage="https://www.toileblanche.com/assets/images/parallax1.jpg"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(eventsJson)} />
+
+  <Nav theme="light" locale={locale} />
+
+  <main id="main-content" class="fetes">
+    <div class="fetes-inner">
+      <header class="fetes-header">
+        <p class="fetes-eyebrow">{c.eyebrow}</p>
+        <h1>{c.title}</h1>
+        <p class="fetes-subtitle">{c.subtitle}</p>
+        <img
+          class="fetes-sketch"
+          src="/assets/images/les-fetes/cover.jpg"
+          alt={sketch.cover}
+          width="1080"
+          height="1040"
+        />
+      </header>
+
+      <section class="fetes-intro">
+        {c.intro.map((p) => <p>{p}</p>)}
+        <p class="fetes-download-wrap">
+          <a class="fetes-download" href={lesFetesPdf} download>{c.download}</a>
+        </p>
+      </section>
+
+      <section class="fetes-section" aria-labelledby="fetes-bar">
+        <img
+          class="fetes-sketch"
+          src="/assets/images/les-fetes/bar-night.jpg"
+          alt={sketch.barNight}
+          width="1000"
+          height="1000"
+          loading="lazy"
+        />
+        <p class="fetes-label">{c.bar.label}</p>
+        <h2 id="fetes-bar">{c.bar.title}</h2>
+        {c.bar.lede.map((p) => <p>{p}</p>)}
+        <dl class="fetes-when">
+          {c.bar.when.map((row) => (
+            <div>
+              <dt>{row.label}</dt>
+              <dd>{row.detail}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="fetes-hours">{c.bar.hours}</p>
+        <img
+          class="fetes-sketch fetes-sketch--wide"
+          src="/assets/images/les-fetes/bar.jpg"
+          alt={sketch.bar}
+          width="1630"
+          height="740"
+          loading="lazy"
+        />
+
+        <h3>{c.bar.drinksTitle}</h3>
+        <ul class="fetes-prices">
+          {c.bar.drinks.map((item) => (
+            <li>
+              <span>{item.name}</span>
+              <span class="fetes-price">{item.price}</span>
+            </li>
+          ))}
+        </ul>
+
+        <h3>{c.bar.foodTitle}</h3>
+        <ul class="fetes-prices">
+          {c.bar.food.map((item) => (
+            <li>
+              <span>{item.name}</span>
+              <span class="fetes-price">{item.price}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="fetes-note">{c.bar.priceNote}</p>
+      </section>
+
+      <section class="fetes-section" aria-labelledby="fetes-tables">
+        <img
+          class="fetes-sketch"
+          src="/assets/images/les-fetes/tables.jpg"
+          alt={sketch.tables}
+          width="1240"
+          height="1020"
+          loading="lazy"
+        />
+        <p class="fetes-label">{c.tablesLabel}</p>
+        <h2 id="fetes-tables">{c.tablesIntro}</h2>
+        {c.tables.map((table) => (
+          <article class="fetes-table">
+            <p class="fetes-date">{table.date}</p>
+            <h3>{table.title}</h3>
+            <p class="fetes-when-line">{table.when}</p>
+            {table.paragraphs?.map((p) => <p>{p}</p>)}
+            {table.courses?.map((course) => (
+              <div class="fetes-course">
+                <h4>{course.title}</h4>
+                <ul>
+                  {course.items.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            ))}
+            {table.extras && (
+              <ul class="fetes-prices">
+                {table.extras.map((item) => (
+                  <li>
+                    <span>{item.name}</span>
+                    <span class="fetes-price">{item.price}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <ul class="fetes-price-lines">
+              {table.priceLines.map((line) => <li>{line}</li>)}
+            </ul>
+            {table.kids && <p class="fetes-kids">{table.kids}</p>}
+          </article>
+        ))}
+        <p class="fetes-reserve">
+          {c.reserveLabel}
+          <a href={`tel:${lesFetesContact.tel}`}>{lesFetesContact.phone}</a>
+          <a href={`mailto:${lesFetesContact.email}`}>{lesFetesContact.email}</a>
+        </p>
+      </section>
+
+      <section class="fetes-section" aria-labelledby="fetes-takeaway">
+        <img
+          class="fetes-sketch"
+          src="/assets/images/les-fetes/takeaway.jpg"
+          alt={sketch.takeaway}
+          width="1120"
+          height="1000"
+          loading="lazy"
+        />
+        <p class="fetes-label">{c.takeaway.label}</p>
+        <h2 id="fetes-takeaway">{c.takeaway.title}</h2>
+        {c.takeaway.lede.map((p) => <p>{p}</p>)}
+        <img
+          class="fetes-sketch fetes-sketch--wide"
+          src="/assets/images/les-fetes/foie-gras.jpg"
+          alt={sketch.foie}
+          width="1480"
+          height="640"
+          loading="lazy"
+        />
+        <ul class="fetes-prices">
+          {c.takeaway.items.map((item) => (
+            <li>
+              <span>{item.name}<span class="fetes-serves">{item.serves}</span></span>
+              <span class="fetes-price">{item.price}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="fetes-note">{c.takeaway.note}</p>
+      </section>
+
+      <section class="fetes-section" aria-labelledby="fetes-stay">
+        <img
+          class="fetes-sketch"
+          src="/assets/images/les-fetes/gifts.jpg"
+          alt={sketch.gifts}
+          width="1000"
+          height="1000"
+          loading="lazy"
+        />
+        <p class="fetes-label">{c.stay.label}</p>
+        <h2 id="fetes-stay">{c.stay.title}</h2>
+        {c.stay.offers.map((offer) => (
+          <article class="fetes-offer">
+            <h3>{offer.title}</h3>
+            {offer.lines.map((line) => <p>{line}</p>)}
+          </article>
+        ))}
+        <p class="fetes-actions">
+          <button type="button" class="fetes-btn distributor-open">{c.stay.bookStay}</button>
+          <a class="fetes-text-link" href={winterHref}>{c.stay.winterLink}</a>
+        </p>
+
+        <h3 class="fetes-gifts-title">{c.stay.giftsTitle}</h3>
+        <p>{c.stay.giftsIntro}</p>
+        <ul class="fetes-gifts">
+          {c.stay.gifts.map((gift) => <li>{gift}</li>)}
+        </ul>
+        <p>
+          <a class="fetes-text-link" href={giftHref}>{c.stay.giftLink}</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</Layout>
+
+<style>
+  .fetes {
+    padding: clamp(72px, 12vw, 120px) 24px clamp(100px, 14vw, 160px);
+    background: var(--color-bg);
+    color: var(--color-ink, #3d3530);
+  }
+
+  .fetes-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .fetes-eyebrow,
+  .fetes-label,
+  .fetes-date {
+    font-family: 'Heebo', var(--font-body, sans-serif);
+    font-weight: 100;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-stone-muted, #9c9080);
+    margin: 0 0 16px;
+  }
+
+  .fetes h1,
+  .fetes h2,
+  .fetes h3,
+  .fetes-subtitle {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-weight: 400;
+    text-transform: none !important;
+    color: var(--color-ink-deep, #1c1917);
+  }
+
+  .fetes h1 {
+    font-size: clamp(48px, 8vw, 72px);
+    line-height: 0.95;
+    margin: 0;
+  }
+
+  .fetes-subtitle {
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 32px);
+    color: #ac6b53;
+    margin: 12px 0 0;
+  }
+
+  .fetes-header {
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
+
+  .fetes-sketch {
+    display: block;
+    width: min(100%, 440px);
+    height: auto;
+    margin: 0 auto 8px;
+  }
+
+  .fetes-header .fetes-sketch {
+    width: min(100%, 480px);
+    margin-top: clamp(32px, 5vw, 52px);
+    margin-bottom: 0;
+  }
+
+  .fetes-section > .fetes-sketch {
+    margin-bottom: 32px;
+  }
+
+  .fetes-sketch--wide {
+    width: 100%;
+    max-width: none;
+    margin: 28px 0 8px;
+  }
+
+  .fetes p,
+  .fetes li {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.7;
+  }
+
+  .fetes-intro p,
+  .fetes-section > p,
+  .fetes-offer p {
+    margin: 0 0 1em;
+  }
+
+  .fetes-download-wrap {
+    margin-top: 28px;
+  }
+
+  .fetes-download,
+  .fetes-btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: #ac6b53;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .fetes-download:hover,
+  .fetes-btn:hover {
+    background: #965a47;
+    transform: translateY(-1px);
+  }
+
+  .fetes-download:active,
+  .fetes-btn:active {
+    transform: translateY(0);
+  }
+
+  .fetes-section {
+    margin-top: clamp(56px, 8vw, 88px);
+    padding-top: clamp(28px, 4vw, 40px);
+    border-top: 1px solid #c8b89a;
+  }
+
+  .fetes h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    margin: 0 0 20px;
+  }
+
+  .fetes h3 {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    margin: 32px 0 12px;
+    color: var(--color-ink-deep, #1c1917);
+  }
+
+  .fetes-when {
+    margin: 28px 0 12px;
+  }
+
+  .fetes-when div {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(200, 184, 154, 0.7);
+  }
+
+  .fetes-when dt {
+    font-family: 'Heebo', var(--font-body, sans-serif);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-stone, #6b6256);
+  }
+
+  .fetes-when dd,
+  .fetes-hours {
+    margin: 0;
+  }
+
+  .fetes-prices {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .fetes-prices li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(200, 184, 154, 0.45);
+  }
+
+  .fetes-price {
+    white-space: nowrap;
+    color: var(--color-stone, #6b6256);
+  }
+
+  .fetes-serves {
+    display: block;
+    color: var(--color-stone, #6b6256);
+    font-size: 0.92em;
+  }
+
+  .fetes-note,
+  .fetes-kids,
+  .fetes-when-line {
+    color: var(--color-stone, #6b6256);
+  }
+
+  .fetes-table {
+    margin-top: 40px;
+    padding-top: 8px;
+  }
+
+  .fetes-date {
+    margin-bottom: 8px;
+  }
+
+  .fetes-table h3 {
+    font-style: normal;
+    font-size: clamp(26px, 3vw, 34px);
+    margin: 0 0 6px;
+  }
+
+  .fetes-course h4 {
+    font-family: 'Heebo', var(--font-body, sans-serif);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase !important;
+    color: var(--color-stone, #6b6256);
+    margin: 22px 0 8px;
+  }
+
+  .fetes-course ul,
+  .fetes-gifts,
+  .fetes-price-lines {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+
+  .fetes-course li,
+  .fetes-gifts li,
+  .fetes-price-lines li {
+    margin: 0 0 0.45em;
+  }
+
+  .fetes-price-lines {
+    margin-top: 18px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .fetes-price-lines li {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-size: 20px;
+    color: var(--color-ink-deep, #1c1917);
+  }
+
+  .fetes-reserve {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid #c8b89a;
+  }
+
+  .fetes-reserve a,
+  .fetes-text-link {
+    color: #ac6b53;
+    text-underline-offset: 3px;
+  }
+
+  .fetes-reserve a:hover,
+  .fetes-text-link:hover {
+    color: #965a47;
+  }
+
+  .fetes-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+    margin-top: 8px;
+  }
+
+  .fetes-gifts-title {
+    margin-top: 48px;
+  }
+
+  @media (max-width: 560px) {
+    .fetes-when div,
+    .fetes-prices li {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+
+    .fetes-price {
+      white-space: normal;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fetes-download:hover,
+    .fetes-btn:hover,
+    .fetes-download:active,
+    .fetes-btn:active {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../i18n/index';
+import { localePath } from '../i18n/index';
+import { getLesFetesCopy, lesFetesPromoVisible } from '../data/les-fetes';
+
+export interface Props {
+  locale?: Locale;
+}
+
+const locale = Astro.props.locale ?? 'en';
+const show = lesFetesPromoVisible();
+const c = getLesFetesCopy(locale).promo;
+const href = localePath('/les-fetes', locale);
+---
+
+{show && (
+  <aside class="tb-fetes-promo" data-les-fetes-promo>
+    <img
+      src="/assets/images/les-fetes/cover.jpg"
+      alt=""
+      width="1080"
+      height="1040"
+    />
+    <p class="tb-fetes-promo-eyebrow">{c.eyebrow}</p>
+    <h2>{c.title}</h2>
+    <p>{c.text}</p>
+    <a href={href}>{c.cta}</a>
+  </aside>
+)}
+
+<style>
+  .tb-fetes-promo {
+    max-width: 40rem;
+    margin: 0 0 4.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e2d9cc;
+  }
+
+  .tb-fetes-promo img {
+    display: block;
+    width: min(100%, 240px);
+    height: auto;
+    margin: 0 0 22px;
+  }
+
+  .tb-fetes-promo-eyebrow {
+    font-family: 'Heebo', var(--font-body, sans-serif);
+    font-weight: 100;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-stone-muted, #9c9080);
+    margin: 0 0 14px;
+  }
+
+  .tb-fetes-promo h2 {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 0.95;
+    margin: 0 0 16px;
+    color: var(--color-ink-deep, #1c1917);
+  }
+
+  .tb-fetes-promo p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.7;
+    margin: 0 0 18px;
+    color: var(--color-ink, #3d3530);
+  }
+
+  .tb-fetes-promo a {
+    font-family: var(--font-body);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ac6b53;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+  }
+
+  .tb-fetes-promo a:hover {
+    color: #965a47;
+  }
+</style>

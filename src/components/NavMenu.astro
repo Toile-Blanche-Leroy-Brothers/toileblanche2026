@@ -1,5 +1,6 @@
 ---
 import { useTranslations, localePath, type Locale } from '../i18n/index';
+import { lesFetesPromoVisible } from '../data/les-fetes';
 import SuiteExplorer from './SuiteExplorer.astro';
 import suitesEn from '../data/suites.json';
 import suitesFr from '../data/suites.fr.json';
@@ -32,6 +33,7 @@ const {
   locale = 'en',
 } = Astro.props;
 const t = useTranslations(locale);
+const showLesFetes = lesFetesPromoVisible();
 const ctaText = Astro.props.ctaText ?? t.nav.bookStay;
 const zenchefBookingUrl = (rid: string, pid?: string) =>
   pid
@@ -105,6 +107,7 @@ const cntReadersChoiceUrl =
       <div class="tb-menu-info-cell tb-menu-info-footer">
         <a href={lp('/about')} class="tb-menu-info-link">{t.nav.about}</a>
         <a href={lp('/l-hiver')} class={`tb-menu-info-link${linkClass(lp('/l-hiver'))}`}>{t.nav.lHiver}</a>
+        {showLesFetes && <a href={lp('/les-fetes')} class={`tb-menu-info-link${linkClass(lp('/les-fetes'))}`} data-les-fetes-promo>{t.nav.lesFetes}</a>}
         <a href={lp('/press')} class="tb-menu-info-link">{t.nav.press}</a>
         <a href={lp('/faq')} class="tb-menu-info-link">{t.nav.faq}</a>
         <a href={lp('/blog')} class="tb-menu-info-link">{t.nav.archive}</a>
@@ -195,6 +198,7 @@ const cntReadersChoiceUrl =
     <div class="tb-menu-mobile-secondary-grid">
       <a href={lp('/about')} class="tb-menu-mobile-secondary-link">{t.nav.about}</a>
       <a href={lp('/l-hiver')} class={`tb-menu-mobile-secondary-link${linkClass(lp('/l-hiver'))}`}>{t.nav.lHiver}</a>
+      {showLesFetes && <a href={lp('/les-fetes')} class={`tb-menu-mobile-secondary-link${linkClass(lp('/les-fetes'))}`} data-les-fetes-promo>{t.nav.lesFetes}</a>}
       <a href={lp('/press')} class="tb-menu-mobile-secondary-link">{t.nav.press}</a>
       <a href={lp('/faq')} class="tb-menu-mobile-secondary-link">{t.nav.faq}</a>
       <a href={lp('/blog')} class="tb-menu-mobile-secondary-link">{t.nav.archive}</a>

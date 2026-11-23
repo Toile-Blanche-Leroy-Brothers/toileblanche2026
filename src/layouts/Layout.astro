@@ -332,5 +332,10 @@ const alternates = getAlternateUrls(currentPath);
       window.addEventListener('scroll', function() { loadAndInitMews(); }, { passive: true, once: true });
     })();
   </script>
+  <script is:inline>
+    if (Date.now() >= Date.parse('2027-01-07T00:00:00+01:00')) {
+      document.querySelectorAll('[data-les-fetes-promo]').forEach(function (el) { el.remove(); });
+    }
+  </script>
 </body>
 </html>

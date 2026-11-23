@@ -4,6 +4,7 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import suitesData from '../../data/suites.fr.json';
 import { encodePath, srcset, srcsetAvif, srcsetWebp } from '../../utils/images';
+import LesFetesPromo from '../../components/LesFetesPromo.astro';
 
 function cardBase(path: string) {
   return path.replace(/\.[^.]+$/, '');
@@ -132,6 +133,7 @@ const suites = suitesData.suites.map(s => ({
 
   <div class="section top-padding-192">
     <div class="container">
+      <LesFetesPromo locale="fr" />
       <div class="tb-three-blocks">
         <div class="tb-feature-block fade-up">
           <div class="tb-feature-block-image">
