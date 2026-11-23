@@ -30,17 +30,16 @@ const href = localePath('/les-fetes', locale);
 
 <style>
   .tb-fetes-promo {
-    max-width: 40rem;
-    margin: 0 0 4.5rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #e2d9cc;
+    max-width: 34rem;
+    margin: 0 auto 5.5rem;
+    text-align: center;
   }
 
   .tb-fetes-promo img {
     display: block;
-    width: min(100%, 240px);
+    width: min(72vw, 300px);
     height: auto;
-    margin: 0 0 22px;
+    margin: 0 auto 4px;
   }
 
   .tb-fetes-promo-eyebrow {
@@ -50,23 +49,25 @@ const href = localePath('/les-fetes', locale);
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--color-stone-muted, #9c9080);
-    margin: 0 0 14px;
+    margin: 0 0 12px;
   }
 
   .tb-fetes-promo h2 {
     font-family: 'Gilda Display', Georgia, serif;
     font-weight: 400;
-    font-size: clamp(36px, 5vw, 56px);
+    font-size: clamp(40px, 5vw, 64px) !important;
     line-height: 0.95;
     margin: 0 0 16px;
     color: var(--color-ink-deep, #1c1917);
+    text-transform: none !important;
   }
 
   .tb-fetes-promo p {
+    max-width: 26rem;
+    margin: 0 auto 20px;
     font-family: var(--font-body);
     font-size: var(--text-base);
     line-height: 1.7;
-    margin: 0 0 18px;
     color: var(--color-ink, #3d3530);
   }
 
@@ -83,5 +84,14 @@ const href = localePath('/les-fetes', locale);
 
   .tb-fetes-promo a:hover {
     color: #965a47;
+  }
+
+  .tb-fetes-promo::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    margin: 2.75rem auto 0;
+    background: #ac6b53;
   }
 </style>

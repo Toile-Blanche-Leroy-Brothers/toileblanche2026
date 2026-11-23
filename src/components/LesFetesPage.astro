@@ -110,7 +110,7 @@ const eventsJson = {
       <section class="fetes-intro">
         {c.intro.map((p) => <p>{p}</p>)}
         <p class="fetes-download-wrap">
-          <a class="fetes-download" href={lesFetesPdf} download>{c.download}</a>
+          <a class="fetes-download" href={lesFetesPdf} target="_blank" rel="noopener noreferrer">{c.download}</a>
         </p>
       </section>
 
@@ -144,25 +144,30 @@ const eventsJson = {
           loading="lazy"
         />
 
-        <h3>{c.bar.drinksTitle}</h3>
-        <ul class="fetes-prices">
-          {c.bar.drinks.map((item) => (
-            <li>
-              <span>{item.name}</span>
-              <span class="fetes-price">{item.price}</span>
-            </li>
-          ))}
-        </ul>
-
-        <h3>{c.bar.foodTitle}</h3>
-        <ul class="fetes-prices">
-          {c.bar.food.map((item) => (
-            <li>
-              <span>{item.name}</span>
-              <span class="fetes-price">{item.price}</span>
-            </li>
-          ))}
-        </ul>
+        <div class="fetes-split">
+          <div>
+            <h3>{c.bar.drinksTitle}</h3>
+            <ul class="fetes-prices">
+              {c.bar.drinks.map((item) => (
+                <li>
+                  <span>{item.name}</span>
+                  <span class="fetes-price">{item.price}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>{c.bar.foodTitle}</h3>
+            <ul class="fetes-prices">
+              {c.bar.food.map((item) => (
+                <li>
+                  <span>{item.name}</span>
+                  <span class="fetes-price">{item.price}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <p class="fetes-note">{c.bar.priceNote}</p>
       </section>
 
@@ -177,41 +182,47 @@ const eventsJson = {
         />
         <p class="fetes-label">{c.tablesLabel}</p>
         <h2 id="fetes-tables">{c.tablesIntro}</h2>
-        {c.tables.map((table) => (
-          <article class="fetes-table">
-            <p class="fetes-date">{table.date}</p>
-            <h3>{table.title}</h3>
-            <p class="fetes-when-line">{table.when}</p>
-            {table.paragraphs?.map((p) => <p>{p}</p>)}
-            {table.courses?.map((course) => (
-              <div class="fetes-course">
-                <h4>{course.title}</h4>
-                <ul>
-                  {course.items.map((item) => <li>{item}</li>)}
-                </ul>
-              </div>
-            ))}
-            {table.extras && (
-              <ul class="fetes-prices">
-                {table.extras.map((item) => (
-                  <li>
-                    <span>{item.name}</span>
-                    <span class="fetes-price">{item.price}</span>
-                  </li>
+        <div class="fetes-break">
+          <div class="fetes-cards">
+            {c.tables.map((table) => (
+              <article class="fetes-card">
+                <p class="fetes-date">{table.date}</p>
+                <h3>{table.title}</h3>
+                <p class="fetes-when-line">{table.when}</p>
+                {table.paragraphs?.map((p) => <p>{p}</p>)}
+                {table.courses?.map((course) => (
+                  <div class="fetes-course">
+                    <h4>{course.title}</h4>
+                    <ul>
+                      {course.items.map((item) => <li>{item}</li>)}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
-            )}
-            <ul class="fetes-price-lines">
-              {table.priceLines.map((line) => <li>{line}</li>)}
-            </ul>
-            {table.kids && <p class="fetes-kids">{table.kids}</p>}
-          </article>
-        ))}
-        <p class="fetes-reserve">
-          {c.reserveLabel}
-          <a href={`tel:${lesFetesContact.tel}`}>{lesFetesContact.phone}</a>
-          <a href={`mailto:${lesFetesContact.email}`}>{lesFetesContact.email}</a>
-        </p>
+                {table.extras && (
+                  <ul class="fetes-prices">
+                    {table.extras.map((item) => (
+                      <li>
+                        <span>{item.name}</span>
+                        <span class="fetes-price">{item.price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div class="fetes-card-foot">
+                  <ul class="fetes-price-lines">
+                    {table.priceLines.map((line) => <li>{line}</li>)}
+                  </ul>
+                  {table.kids && <p class="fetes-kids">{table.kids}</p>}
+                </div>
+              </article>
+            ))}
+          </div>
+          <p class="fetes-reserve">
+            {c.reserveLabel}
+            <a href={`tel:${lesFetesContact.tel}`}>{lesFetesContact.phone}</a>
+            <a href={`mailto:${lesFetesContact.email}`}>{lesFetesContact.email}</a>
+          </p>
+        </div>
       </section>
 
       <section class="fetes-section" aria-labelledby="fetes-takeaway">
@@ -256,25 +267,30 @@ const eventsJson = {
         />
         <p class="fetes-label">{c.stay.label}</p>
         <h2 id="fetes-stay">{c.stay.title}</h2>
-        {c.stay.offers.map((offer) => (
-          <article class="fetes-offer">
-            <h3>{offer.title}</h3>
-            {offer.lines.map((line) => <p>{line}</p>)}
-          </article>
-        ))}
-        <p class="fetes-actions">
-          <button type="button" class="fetes-btn distributor-open">{c.stay.bookStay}</button>
-          <a class="fetes-text-link" href={winterHref}>{c.stay.winterLink}</a>
-        </p>
-
-        <h3 class="fetes-gifts-title">{c.stay.giftsTitle}</h3>
-        <p>{c.stay.giftsIntro}</p>
-        <ul class="fetes-gifts">
-          {c.stay.gifts.map((gift) => <li>{gift}</li>)}
-        </ul>
-        <p>
-          <a class="fetes-text-link" href={giftHref}>{c.stay.giftLink}</a>
-        </p>
+        <div class="fetes-break">
+          <div class="fetes-cards">
+            {c.stay.offers.map((offer) => (
+              <article class="fetes-card">
+                <h3>{offer.title}</h3>
+                {offer.lines.map((line) => <p>{line}</p>)}
+              </article>
+            ))}
+            <article class="fetes-card">
+              <h3>{c.stay.giftsTitle}</h3>
+              <p>{c.stay.giftsIntro}</p>
+              <ul class="fetes-gifts">
+                {c.stay.gifts.map((gift) => <li>{gift}</li>)}
+              </ul>
+              <p class="fetes-card-foot">
+                <a class="fetes-text-link" href={giftHref}>{c.stay.giftLink}</a>
+              </p>
+            </article>
+          </div>
+          <p class="fetes-actions">
+            <button type="button" class="fetes-btn distributor-open">{c.stay.bookStay}</button>
+            <a class="fetes-text-link" href={winterHref}>{c.stay.winterLink}</a>
+          </p>
+        </div>
       </section>
     </div>
   </main>
@@ -479,19 +495,65 @@ const eventsJson = {
     color: var(--color-stone, #6b6256);
   }
 
-  .fetes-table {
-    margin-top: 40px;
-    padding-top: 8px;
+  .fetes-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 40px;
+    margin-top: 8px;
   }
 
-  .fetes-date {
-    margin-bottom: 8px;
+  .fetes-split h3 {
+    margin-top: 16px;
   }
 
-  .fetes-table h3 {
+  .fetes-break {
+    width: min(1080px, calc(100vw - 48px));
+    margin-top: 8px;
+    margin-left: calc(50% - min(540px, 50vw - 24px));
+  }
+
+  .fetes-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .fetes-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding: 28px 26px 24px;
+    background: #fffdf8;
+    border: 1px solid #e2d9cc;
+  }
+
+  .fetes-card .fetes-date {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(40px, 4vw, 52px);
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: none !important;
+    color: #ac6b53;
+    margin: 0 0 10px;
+  }
+
+  .fetes-card h3 {
     font-style: normal;
-    font-size: clamp(26px, 3vw, 34px);
-    margin: 0 0 6px;
+    font-size: clamp(24px, 2.2vw, 30px) !important;
+    line-height: 1.2;
+    margin: 0 0 8px;
+  }
+
+  .fetes-card > p {
+    margin: 0 0 0.8em;
+  }
+
+  .fetes-card-foot {
+    margin-top: auto;
+    padding-top: 18px;
   }
 
   .fetes-course h4 {
@@ -540,6 +602,11 @@ const eventsJson = {
 
   .fetes-reserve a,
   .fetes-text-link {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
     color: #ac6b53;
     text-underline-offset: 3px;
   }
@@ -554,11 +621,19 @@ const eventsJson = {
     flex-wrap: wrap;
     align-items: center;
     gap: 16px 24px;
-    margin-top: 8px;
+    margin-top: 24px;
   }
 
-  .fetes-gifts-title {
-    margin-top: 48px;
+  @media (max-width: 760px) {
+    .fetes-cards,
+    .fetes-split {
+      grid-template-columns: 1fr;
+    }
+
+    .fetes-break {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 560px) {

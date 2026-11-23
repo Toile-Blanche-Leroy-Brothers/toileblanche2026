@@ -82,7 +82,7 @@ const fr: LesFetesCopy = {
     "Cet hiver, quand la nuit tombe sur Saint-Paul-de-Vence, Toile Blanche change de couleur. Les bougies s'allument, le champagne est frais, les huîtres arrivent.",
     "Bienvenue à notre bar d'hiver.",
   ],
-  download: 'Télécharger le programme (PDF)',
+  download: 'Voir le programme (PDF)',
   bar: {
     label: 'Chapitre I',
     title: "Le bar d'hiver",
@@ -334,7 +334,7 @@ const en: LesFetesCopy = {
     'This winter, when night falls over Saint-Paul-de-Vence, Toile Blanche changes colour. The candles are lit, the champagne is cold, the oysters are in.',
     'Welcome to the winter bar.',
   ],
-  download: 'Download the programme (PDF)',
+  download: 'View the programme (PDF)',
   bar: {
     label: 'Chapter I',
     title: 'The winter bar',
