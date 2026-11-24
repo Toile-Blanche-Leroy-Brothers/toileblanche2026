@@ -104,6 +104,7 @@ const fr: LesFetesCopy = {
     ],
     food: [
       { name: 'Tasse de potage du jour', price: '9 €' },
+      { name: 'Escargots du Var à la bourguignonne, les 6', price: '16 €' },
       { name: 'Huîtres fines de claire, les 6 ou les 12', price: '27 € · 49 €' },
       { name: '6 huîtres fines de claire et une coupe de champagne', price: '39 €' },
       { name: 'Foie gras maison, brioche toastée, chutney de poire', price: '22 €' },
@@ -132,7 +133,7 @@ const fr: LesFetesCopy = {
         {
           title: 'Entrée',
           items: [
-            'Noix de Saint-Jacques à la nage de champagne, hareng fumé, poireaux, cresson et citron confit',
+            'Noix de Saint-Jacques à la nage de champagne, harenga fumé, poireaux, cresson et citron confit',
           ],
         },
         {
@@ -357,6 +358,7 @@ const en: LesFetesCopy = {
     ],
     food: [
       { name: 'Cup of soup of the day', price: '9 €' },
+      { name: 'Six Var snails, garlic and parsley butter', price: '16 €' },
       { name: 'Fines de claire oysters, 6 or 12', price: '27 € · 49 €' },
       { name: '6 fines de claire oysters and a glass of champagne', price: '39 €' },
       { name: 'Homemade foie gras, toasted brioche, pear chutney', price: '22 €' },
@@ -384,7 +386,7 @@ const en: LesFetesCopy = {
         },
         {
           title: 'Starter',
-          items: ['Scallops in a champagne broth, smoked herring, leeks, watercress and preserved lemon'],
+          items: ['Scallops in a champagne broth, smoked harenga, leeks, watercress and preserved lemon'],
         },
         {
           title: 'Main',
