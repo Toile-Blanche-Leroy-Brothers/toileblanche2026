@@ -103,9 +103,10 @@ const fr: LesFetesCopy = {
       { name: 'Vins rouges et blancs du moment, verre ou bouteille', price: '9 € · 39 €' },
     ],
     food: [
-      { name: 'Huîtres Gillardeau, les 6 ou les 12', price: '27 € · 49 €' },
-      { name: '6 huîtres Gillardeau et une coupe de champagne', price: '39 €' },
-      { name: 'Foie gras maison, brioche toastée, chutney de figues', price: '22 €' },
+      { name: 'Tasse de potage du jour', price: '9 €' },
+      { name: 'Huîtres fines de claire, les 6 ou les 12', price: '27 € · 49 €' },
+      { name: '6 huîtres fines de claire et une coupe de champagne', price: '39 €' },
+      { name: 'Foie gras maison, brioche toastée, chutney de poire', price: '22 €' },
       { name: 'Assiette de fromages', price: '18 €' },
       { name: 'Assiette de charcuterie', price: '19 €' },
       { name: 'Clémentines et marrons glacés', price: '9 €' },
@@ -162,7 +163,7 @@ const fr: LesFetesCopy = {
         "Et pour l'occasion, nous vous proposons aussi :",
       ],
       extras: [
-        { name: "Le bar de l'écailler : huîtres Gillardeau, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
+        { name: "Le bar de l'écailler : huîtres fines de claire, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
         { name: 'Brie de Meaux truffé, salade de mâche', price: '14 €' },
         { name: 'La bûche de Noël Toile Blanche', price: '12 €' },
       ],
@@ -230,7 +231,7 @@ const fr: LesFetesCopy = {
         "Et pour l'occasion, nous vous proposons aussi :",
       ],
       extras: [
-        { name: "Le bar de l'écailler : huîtres Gillardeau, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
+        { name: "Le bar de l'écailler : huîtres fines de claire, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
         { name: 'Brie de Meaux truffé, salade de mâche', price: '14 €' },
         { name: 'Forêt noire revisitée', price: '12 €' },
       ],
@@ -247,7 +248,7 @@ const fr: LesFetesCopy = {
       'Préparé dans notre cuisine, pour votre table de fête.',
     ],
     items: [
-      { name: 'Torchon 300 g', serves: '4 à 6 personnes', price: '59 €' },
+      { name: 'Torchon 250 g', serves: '4 à 5 personnes', price: '49 €' },
       { name: 'Torchon 500 g', serves: '8 à 10 personnes', price: '95 €' },
     ],
     note: 'Sur commande, à retirer à la réception du 18 au 24 décembre.',
@@ -268,7 +269,7 @@ const fr: LesFetesCopy = {
         title: 'Le Nouvel An, dès 990 € pour deux',
         lines: [
           'Deux nuits du 30 décembre au 1er janvier, petit-déjeuner inclus.',
-          'Le dîner du réveillon.',
+          'Le dîner du Réveillon.',
           "Le 30 décembre, le bar de l'écailler et un plat de la Guinguette.",
         ],
       },
@@ -355,9 +356,10 @@ const en: LesFetesCopy = {
       { name: 'Red and white wines of the moment, glass or bottle', price: '9 € · 39 €' },
     ],
     food: [
-      { name: 'Gillardeau oysters, 6 or 12', price: '27 € · 49 €' },
-      { name: '6 Gillardeau oysters and a glass of champagne', price: '39 €' },
-      { name: 'Homemade foie gras, toasted brioche, fig chutney', price: '22 €' },
+      { name: 'Cup of soup of the day', price: '9 €' },
+      { name: 'Fines de claire oysters, 6 or 12', price: '27 € · 49 €' },
+      { name: '6 fines de claire oysters and a glass of champagne', price: '39 €' },
+      { name: 'Homemade foie gras, toasted brioche, pear chutney', price: '22 €' },
       { name: 'Cheese plate', price: '18 €' },
       { name: 'Charcuterie plate', price: '19 €' },
       { name: 'Clementines and candied chestnuts', price: '9 €' },
@@ -412,7 +414,7 @@ const en: LesFetesCopy = {
         'For the occasion, we also serve:',
       ],
       extras: [
-        { name: 'Oyster bar: Gillardeau oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
+        { name: 'Oyster bar: Fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
         { name: 'Truffled brie de Meaux, lamb’s lettuce', price: '14 €' },
         { name: 'Toile Blanche yule log', price: '12 €' },
       ],
@@ -470,7 +472,7 @@ const en: LesFetesCopy = {
         'For the occasion, we also serve:',
       ],
       extras: [
-        { name: 'Oyster bar: Gillardeau oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
+        { name: 'Oyster bar: Fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
         { name: 'Truffled brie de Meaux, lamb’s lettuce', price: '14 €' },
         { name: 'Black Forest cake, revisited', price: '12 €' },
       ],
@@ -487,7 +489,7 @@ const en: LesFetesCopy = {
       'Made in our kitchen, for your festive table.',
     ],
     items: [
-      { name: 'Torchon, 300 g', serves: 'Serves 4 to 6', price: '59 €' },
+      { name: 'Torchon, 250 g', serves: 'Serves 4 to 5', price: '49 €' },
       { name: 'Torchon, 500 g', serves: 'Serves 8 to 10', price: '95 €' },
     ],
     note: 'Order in advance. Collection at reception from 18 to 24 December.',
