@@ -94,25 +94,25 @@ const fr: LesFetesCopy = {
       { label: 'Décembre', detail: 'Vendredis et samedis, 4, 5, 11, 12, 18 et 19' },
       { label: 'Entre les fêtes', detail: 'Tous les soirs, du 25 décembre au 1er janvier' },
     ],
-    hours: 'De 17h à 21h, sans réservation.',
+    hours: 'Dès le 4 décembre, de 17h à 21h, sans réservation.',
     drinksTitle: 'À boire',
     foodTitle: 'À manger',
     drinks: [
-      { name: 'Champagne, verre ou bouteille', price: '16 € · 85 €' },
+      { name: 'Champagne Maison Telmont, brut, verre 15 cl ou bouteille 75 cl', price: '16 € · 85 €' },
       { name: 'Vin chaud maison', price: '7 €' },
-      { name: 'Vins rouges et blancs du moment, verre ou bouteille', price: '9 € · 39 €' },
+      { name: 'Vins de Provence du moment, verre ou bouteille', price: '9 € · 39 €' },
     ],
     food: [
-      { name: 'Tasse de potage du jour', price: '9 €' },
+      { name: 'Tasse de potage du jour', price: '8 €' },
       { name: 'Escargots du Var à la bourguignonne, les 6', price: '16 €' },
-      { name: 'Huîtres fines de claire, les 6 ou les 12', price: '27 € · 49 €' },
-      { name: '6 huîtres fines de claire et une coupe de champagne', price: '39 €' },
+      { name: 'Huîtres fines de claire n°3, les 6 ou les 12', price: '20 € · 40 €' },
       { name: 'Foie gras maison, brioche toastée, chutney de poire', price: '22 €' },
-      { name: 'Assiette de fromages', price: '18 €' },
+      { name: 'Assiette de fromages de la Maison Mons', price: '16 €' },
       { name: 'Assiette de charcuterie', price: '19 €' },
-      { name: 'Clémentines et marrons glacés', price: '9 €' },
+      { name: 'La planche à partager, fromages et charcuterie', price: '26 €' },
+      { name: 'Marrons glacés, les 4', price: '8 €' },
     ],
-    priceNote: 'Prix en euros, nets, service compris.',
+    priceNote: 'Prix en euros, nets, service compris. Carte des vins sur demande.',
   },
   tablesLabel: 'Chapitre II',
   tablesIntro: 'Les tables de fête. Sur réservation.',
@@ -125,7 +125,7 @@ const fr: LesFetesCopy = {
         {
           title: 'Pour commencer',
           items: [
-            "Cromesquis d'escargot du Var, fenouil, condiment noix et piment d'Espelette",
+            "Cromesquis d'escargot du Var, condiment noix et piment d'Espelette",
             'Cappuccino de champignon, mousse de lait, poudre de cèpe',
             'Foie gras en fine gelée de cerise griotte, hibiscus, gomasio sésame',
           ],
@@ -133,13 +133,13 @@ const fr: LesFetesCopy = {
         {
           title: 'Entrée',
           items: [
-            'Noix de Saint-Jacques à la nage de champagne, harenga fumé, poireaux, cresson et citron confit',
+            'Noix de Saint-Jacques à la nage de Champagne, harenga fumé, poireaux, cresson et citron confit',
           ],
         },
         {
           title: 'Plat',
           items: [
-            'Poularde de Bresse farcie aux écrevisses, trompettes de la mort en persillade, fine mousseline de pommes de terre, jus de volaille',
+            'Poularde de Bresse farcie aux écrevisses, trompettes de la mort, fine mousseline de pommes de terre, jus de volaille',
           ],
         },
         {
@@ -151,7 +151,7 @@ const fr: LesFetesCopy = {
           items: ['Bûche de Noël Toile Blanche, poire, caramel, Gavottes, tonka', 'Mignardises'],
         },
       ],
-      priceLines: ['125 € par personne', 'Accord mets et vins, 55 €'],
+      priceLines: ['125 € par personne', 'Accord mets et vins, 55 €, quatre verres'],
       kids: "Menu enfant jusqu'à 12 ans, 45 € : tortellini ricotta, épinards, butternut, suprême de volaille ou filet de loup, purée, bûche de Noël.",
     },
     {
@@ -193,7 +193,7 @@ const fr: LesFetesCopy = {
         {
           title: 'Poisson',
           items: [
-            "Filet de saint-pierre en nage de caviar osciètre, citron confit, tombée d'épinards et salicornes, noisette grillée",
+            "Filet de Saint-Pierre en nage de caviar osciètre, citron confit, tombée d'épinards et salicornes, noisette grillée",
           ],
         },
         {
@@ -218,7 +218,7 @@ const fr: LesFetesCopy = {
       priceLines: [
         '175 € par personne',
         'Coupe de champagne à minuit incluse',
-        'Accord mets et vins, 75 €',
+        'Accord mets et vins, 65 €, cinq verres',
       ],
       kids: "Menu enfant jusqu'à 12 ans, 45 € : tortellini ricotta, épinards, butternut, suprême de volaille ou filet de loup, purée, forêt noire revisitée.",
     },
@@ -249,8 +249,8 @@ const fr: LesFetesCopy = {
       'Préparé dans notre cuisine, pour votre table de fête.',
     ],
     items: [
-      { name: 'Torchon 250 g', serves: '4 à 5 personnes', price: '49 €' },
-      { name: 'Torchon 500 g', serves: '8 à 10 personnes', price: '95 €' },
+      { name: 'Torchon 250 g', serves: '4 à 5 personnes', price: '40 €' },
+      { name: 'Torchon 500 g', serves: '8 à 10 personnes', price: '80 €' },
     ],
     note: 'Sur commande, à retirer à la réception du 18 au 24 décembre.',
   },
@@ -263,7 +263,7 @@ const fr: LesFetesCopy = {
         lines: [
           'Deux nuits en suite, petit-déjeuner inclus.',
           'Un dîner au Restaurant, jusqu’à 80 € par personne, hors boissons.',
-          'À Toile de Nuit, une coupe de champagne et six huîtres par personne.',
+          "Au bar d'hiver, une coupe de champagne et six huîtres par personne.",
         ],
       },
       {
@@ -271,7 +271,7 @@ const fr: LesFetesCopy = {
         lines: [
           'Deux nuits du 30 décembre au 1er janvier, petit-déjeuner inclus.',
           'Le dîner du Réveillon.',
-          "Le 30 décembre, le bar de l'écailler et un plat de la Guinguette.",
+          "Le 1er janvier, le bar de l'écailler et un plat de la Guinguette.",
         ],
       },
       {
@@ -283,7 +283,7 @@ const fr: LesFetesCopy = {
       },
     ],
     giftsTitle: 'Offrir',
-    giftsIntro: 'Une nuit, un dîner, une soirée à Toile de Nuit. Cartes cadeaux valables un an.',
+    giftsIntro: "Une nuit, un dîner, une soirée au bar d'hiver. Cartes cadeaux valables un an.",
     gifts: [
       'Montant libre, dès 50 €',
       'Dîner pour deux au Restaurant, dès 150 €',
@@ -296,14 +296,14 @@ const fr: LesFetesCopy = {
   promo: {
     eyebrow: "Fin d'année 2026",
     title: 'Les Fêtes',
-    text: "Le bar d'hiver, et quatre tables entre le réveillon de Noël et le jour de l'An.",
+    text: "Le bar d'hiver dès le 4 décembre, et quatre tables entre le réveillon de Noël et le jour de l'An.",
     cta: 'Voir le programme',
   },
   events: [
     {
       name: 'Réveillon de Noël à Toile Blanche',
       startDate: '2026-12-24',
-      description: 'Dîner du 24 décembre, 125 € par personne. Accord mets et vins 55 €.',
+      description: 'Dîner du 24 décembre, 125 € par personne. Accord mets et vins 55 €, quatre verres.',
       price: '125',
     },
     {
@@ -314,7 +314,7 @@ const fr: LesFetesCopy = {
     {
       name: 'Réveillon du Nouvel An à Toile Blanche',
       startDate: '2026-12-31',
-      description: 'Dîner du 31 décembre, 175 € par personne, coupe de champagne à minuit incluse.',
+      description: 'Dîner du 31 décembre, 175 € par personne, coupe de champagne à minuit incluse. Accord mets et vins 65 €, cinq verres.',
       price: '175',
     },
     {
@@ -334,7 +334,7 @@ const en: LesFetesCopy = {
   subtitle: 'at Toile Blanche',
   intro: [
     'This winter, when night falls over Saint-Paul-de-Vence, Toile Blanche changes colour. The candles are lit, the champagne is cold, the oysters are in.',
-    'Welcome to the winter bar.',
+    'Welcome to our winter bar.',
   ],
   download: 'View the programme (PDF)',
   bar: {
@@ -348,25 +348,25 @@ const en: LesFetesCopy = {
       { label: 'December', detail: 'Fridays and Saturdays, 4, 5, 11, 12, 18 and 19' },
       { label: 'Between the holidays', detail: 'Every evening, from 25 December to 1 January' },
     ],
-    hours: 'From 5 pm to 9 pm. No reservation.',
+    hours: 'From 4 December, 5 pm to 9 pm. No reservation.',
     drinksTitle: 'To drink',
     foodTitle: 'To eat',
     drinks: [
-      { name: 'Champagne, glass or bottle', price: '16 € · 85 €' },
+      { name: 'Maison Telmont champagne, brut, 15 cl glass or 75 cl bottle', price: '16 € · 85 €' },
       { name: 'Homemade mulled wine', price: '7 €' },
-      { name: 'Red and white wines of the moment, glass or bottle', price: '9 € · 39 €' },
+      { name: 'Provence wines of the moment, glass or bottle', price: '9 € · 39 €' },
     ],
     food: [
-      { name: 'Cup of soup of the day', price: '9 €' },
+      { name: 'Cup of soup of the day', price: '8 €' },
       { name: 'Six Var snails, garlic and parsley butter', price: '16 €' },
-      { name: 'Fines de claire oysters, 6 or 12', price: '27 € · 49 €' },
-      { name: '6 fines de claire oysters and a glass of champagne', price: '39 €' },
+      { name: 'Fines de claire oysters no. 3, 6 or 12', price: '20 € · 40 €' },
       { name: 'Homemade foie gras, toasted brioche, pear chutney', price: '22 €' },
-      { name: 'Cheese plate', price: '18 €' },
+      { name: 'Cheese plate from Maison Mons', price: '16 €' },
       { name: 'Charcuterie plate', price: '19 €' },
-      { name: 'Clementines and candied chestnuts', price: '9 €' },
+      { name: 'Sharing board, cheese and charcuterie', price: '26 €' },
+      { name: 'Candied chestnuts, 4 pieces', price: '8 €' },
     ],
-    priceNote: 'Prices in euros, service included.',
+    priceNote: 'Prices in euros, service included. Wine list on request.',
   },
   tablesLabel: 'Chapter II',
   tablesIntro: 'Festive tables. By reservation.',
@@ -379,7 +379,7 @@ const en: LesFetesCopy = {
         {
           title: 'To begin',
           items: [
-            'Var snail croquette, fennel, walnut and Espelette pepper',
+            'Var snail croquette, walnut and Espelette pepper',
             'Mushroom cappuccino, milk foam, cep powder',
             'Foie gras in a fine morello cherry jelly, hibiscus, sesame gomasio',
           ],
@@ -391,7 +391,7 @@ const en: LesFetesCopy = {
         {
           title: 'Main',
           items: [
-            'Bresse chicken stuffed with crayfish, black trumpet mushrooms with persillade, fine potato mousseline, poultry jus',
+            'Bresse chicken stuffed with crayfish, black trumpet mushrooms, fine potato mousseline, poultry jus',
           ],
         },
         {
@@ -403,7 +403,7 @@ const en: LesFetesCopy = {
           items: ['Toile Blanche yule log, pear, caramel, Gavottes, tonka', 'Petits fours'],
         },
       ],
-      priceLines: ['125 € per person', 'Wine pairing, 55 €'],
+      priceLines: ['125 € per person', 'Wine pairing, 55 €, four glasses'],
       kids: 'Children’s menu up to 12, 45 €: ricotta tortellini, spinach, butternut, chicken supreme or sea bass fillet, mash, and the yule log.',
     },
     {
@@ -461,7 +461,7 @@ const en: LesFetesCopy = {
           items: ['Intense chocolate, fine cocoa sponge, Griottines and light vanilla cream'],
         },
       ],
-      priceLines: ['175 € per person', 'A glass of champagne at midnight included', 'Wine pairing, 75 €'],
+      priceLines: ['175 € per person', 'A glass of champagne at midnight included', 'Wine pairing, 65 €, five glasses'],
       kids: 'Children’s menu up to 12, 45 €: ricotta tortellini, spinach, butternut, chicken supreme or sea bass fillet, mash, and a revisited Black Forest.',
     },
     {
@@ -491,8 +491,8 @@ const en: LesFetesCopy = {
       'Made in our kitchen, for your festive table.',
     ],
     items: [
-      { name: 'Torchon, 250 g', serves: 'Serves 4 to 5', price: '49 €' },
-      { name: 'Torchon, 500 g', serves: 'Serves 8 to 10', price: '95 €' },
+      { name: 'Torchon, 250 g', serves: 'Serves 4 to 5', price: '40 €' },
+      { name: 'Torchon, 500 g', serves: 'Serves 8 to 10', price: '80 €' },
     ],
     note: 'Order in advance. Collection at reception from 18 to 24 December.',
   },
@@ -505,7 +505,7 @@ const en: LesFetesCopy = {
         lines: [
           'Two nights in a suite, breakfast included.',
           'Dinner at Le Restaurant, up to 80 € per person, excluding drinks.',
-          'At Toile de Nuit, a glass of champagne and six oysters per person.',
+          'At the winter bar, a glass of champagne and six oysters per person.',
         ],
       },
       {
@@ -513,7 +513,7 @@ const en: LesFetesCopy = {
         lines: [
           'Two nights from 30 December to 1 January, breakfast included.',
           'New Year’s Eve dinner.',
-          'On 30 December, the oyster bar and a dish from La Guinguette.',
+          'On 1 January, the oyster bar and a dish from La Guinguette.',
         ],
       },
       {
@@ -525,7 +525,7 @@ const en: LesFetesCopy = {
       },
     ],
     giftsTitle: 'Gifts',
-    giftsIntro: 'A night, a dinner, an evening at Toile de Nuit. Gift cards valid for one year.',
+    giftsIntro: 'A night, a dinner, an evening at the winter bar. Gift cards valid for one year.',
     gifts: [
       'Any amount, from 50 €',
       'Dinner for two at Le Restaurant, from 150 €',
@@ -538,14 +538,14 @@ const en: LesFetesCopy = {
   promo: {
     eyebrow: 'Year’s end 2026',
     title: 'Les Fêtes',
-    text: 'The winter bar, and four tables between Christmas Eve and New Year’s Day.',
+    text: 'The winter bar from 4 December, and four tables between Christmas Eve and New Year’s Day.',
     cta: 'See the programme',
   },
   events: [
     {
       name: 'Christmas Eve dinner at Toile Blanche',
       startDate: '2026-12-24',
-      description: 'Dinner on 24 December, 125 € per person. Wine pairing 55 €.',
+      description: 'Dinner on 24 December, 125 € per person. Wine pairing 55 €, four glasses.',
       price: '125',
     },
     {
@@ -556,7 +556,8 @@ const en: LesFetesCopy = {
     {
       name: 'New Year’s Eve dinner at Toile Blanche',
       startDate: '2026-12-31',
-      description: 'Dinner on 31 December, 175 € per person, a glass of champagne at midnight included.',
+      description:
+        'Dinner on 31 December, 175 € per person, a glass of champagne at midnight included. Wine pairing 65 €, five glasses.',
       price: '175',
     },
     {
