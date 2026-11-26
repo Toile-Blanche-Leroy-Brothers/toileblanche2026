@@ -98,7 +98,7 @@ const fr: LesFetesCopy = {
     drinksTitle: 'À boire',
     foodTitle: 'À manger',
     drinks: [
-      { name: 'Champagne Maison Telmont, brut, verre 15 cl ou bouteille 75 cl', price: '16 € · 85 €' },
+      { name: 'Champagne Maison Telmont, brut blanc, verre 15 cl ou bouteille 75 cl', price: '16 € · 85 €' },
       { name: 'Vin chaud maison', price: '7 €' },
       { name: 'Vins de Provence du moment, verre ou bouteille', price: '9 € · 39 €' },
     ],
@@ -164,7 +164,7 @@ const fr: LesFetesCopy = {
         "Et pour l'occasion, nous vous proposons aussi :",
       ],
       extras: [
-        { name: "Le bar de l'écailler : huîtres fines de claire, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
+        { name: "L'assiette de l'écailler : huîtres fines de claire, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
         { name: 'Brie de Meaux truffé, salade de mâche', price: '14 €' },
         { name: 'La bûche de Noël Toile Blanche', price: '12 €' },
       ],
@@ -232,7 +232,7 @@ const fr: LesFetesCopy = {
         "Et pour l'occasion, nous vous proposons aussi :",
       ],
       extras: [
-        { name: "Le bar de l'écailler : huîtres fines de claire, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
+        { name: "L'assiette de l'écailler : huîtres fines de claire, langoustines, truite en gravlax, crevettes roses, bulots, rillettes de la mer", price: '34 €' },
         { name: 'Brie de Meaux truffé, salade de mâche', price: '14 €' },
         { name: 'Forêt noire revisitée', price: '12 €' },
       ],
@@ -252,7 +252,7 @@ const fr: LesFetesCopy = {
       { name: 'Torchon 250 g', serves: '4 à 5 personnes', price: '40 €' },
       { name: 'Torchon 500 g', serves: '8 à 10 personnes', price: '80 €' },
     ],
-    note: 'Sur commande, à retirer à la réception du 18 au 24 décembre.',
+    note: 'Sur commande, à retirer du 18 au 24 décembre.',
   },
   stay: {
     label: 'Chapitre IV',
@@ -309,7 +309,7 @@ const fr: LesFetesCopy = {
     {
       name: 'Déjeuner de Noël à La Guinguette',
       startDate: '2026-12-25',
-      description: "Déjeuner du 25 décembre à La Guinguette, carte habituelle et bar de l'écailler.",
+      description: "Déjeuner du 25 décembre à La Guinguette, carte habituelle et assiette de l'écailler.",
     },
     {
       name: 'Réveillon du Nouvel An à Toile Blanche',
@@ -320,7 +320,7 @@ const fr: LesFetesCopy = {
     {
       name: "Déjeuner du Jour de l'An à La Guinguette",
       startDate: '2027-01-01',
-      description: "Déjeuner du 1er janvier à La Guinguette, carte habituelle et bar de l'écailler.",
+      description: "Déjeuner du 1er janvier à La Guinguette, carte habituelle et assiette de l'écailler.",
     },
   ],
 };
@@ -352,7 +352,7 @@ const en: LesFetesCopy = {
     drinksTitle: 'To drink',
     foodTitle: 'To eat',
     drinks: [
-      { name: 'Maison Telmont champagne, brut, 15 cl glass or 75 cl bottle', price: '16 € · 85 €' },
+      { name: 'Maison Telmont champagne, brut blanc, 15 cl glass or 75 cl bottle', price: '16 € · 85 €' },
       { name: 'Homemade mulled wine', price: '7 €' },
       { name: 'Provence wines of the moment, glass or bottle', price: '9 € · 39 €' },
     ],
@@ -416,7 +416,7 @@ const en: LesFetesCopy = {
         'For the occasion, we also serve:',
       ],
       extras: [
-        { name: 'Oyster bar: Fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
+        { name: 'Oyster platter: fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
         { name: 'Truffled brie de Meaux, lamb’s lettuce', price: '14 €' },
         { name: 'Toile Blanche yule log', price: '12 €' },
       ],
@@ -474,7 +474,7 @@ const en: LesFetesCopy = {
         'For the occasion, we also serve:',
       ],
       extras: [
-        { name: 'Oyster bar: Fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
+        { name: 'Oyster platter: fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
         { name: 'Truffled brie de Meaux, lamb’s lettuce', price: '14 €' },
         { name: 'Black Forest cake, revisited', price: '12 €' },
       ],
@@ -494,7 +494,7 @@ const en: LesFetesCopy = {
       { name: 'Torchon, 250 g', serves: 'Serves 4 to 5', price: '40 €' },
       { name: 'Torchon, 500 g', serves: 'Serves 8 to 10', price: '80 €' },
     ],
-    note: 'Order in advance. Collection at reception from 18 to 24 December.',
+    note: 'Order in advance. Collection from 18 to 24 December.',
   },
   stay: {
     label: 'Chapter IV',
@@ -551,7 +551,7 @@ const en: LesFetesCopy = {
     {
       name: 'Christmas Day lunch at La Guinguette',
       startDate: '2026-12-25',
-      description: 'Lunch on 25 December at La Guinguette, the usual menu and the oyster bar.',
+      description: 'Lunch on 25 December at La Guinguette, the usual menu and the oyster platter.',
     },
     {
       name: 'New Year’s Eve dinner at Toile Blanche',
@@ -563,7 +563,7 @@ const en: LesFetesCopy = {
     {
       name: 'New Year’s Day lunch at La Guinguette',
       startDate: '2027-01-01',
-      description: 'Lunch on 1 January at La Guinguette, the usual menu and the oyster bar.',
+      description: 'Lunch on 1 January at La Guinguette, the usual menu and the oyster platter.',
     },
   ],
 };
