@@ -23,6 +23,9 @@ const sketch = {
   bar: fr
     ? 'Dessin du bar d’hiver, avec guirlandes, champagne et huîtres'
     : 'Sketch of the winter bar, with garlands, champagne and oysters',
+  art: fr
+    ? 'Dessin d’un peintre accrochant une toile parmi d’autres tableaux'
+    : 'Sketch of a painter hanging a canvas among other pictures',
   tables: fr
     ? 'Dessin d’un peintre devant une nature morte, bouteille et pain'
     : 'Sketch of a painter at a still life, a bottle and a loaf',
@@ -169,6 +172,48 @@ const eventsJson = {
           </div>
         </div>
         <p class="fetes-note">{c.bar.priceNote}</p>
+      </section>
+
+      <section class="fetes-section" aria-labelledby="fetes-art">
+        <img
+          class="fetes-sketch"
+          src="/assets/images/les-fetes/art.jpg"
+          alt={sketch.art}
+          width="1080"
+          height="1080"
+          loading="lazy"
+        />
+        <p class="fetes-label">{c.art.label}</p>
+        <h2 id="fetes-art">{c.art.title}</h2>
+        <p class="fetes-art-series">{c.art.series}</p>
+        <p class="fetes-art-artists">{c.art.artists}</p>
+        <p class="fetes-art-work">{c.art.work}</p>
+        <p>{c.art.lede}</p>
+        <div class="fetes-break">
+          <div class="fetes-cards">
+            {c.art.venues.map((venue) => (
+              <article class="fetes-card">
+                <h3>{venue.name}</h3>
+                <p>{venue.when}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <h3 class="fetes-art-night">{c.art.nightLabel}</h3>
+        <p>{c.art.nightLede}</p>
+        <dl class="fetes-when fetes-when--time">
+          {c.art.schedule.map((row) => (
+            <div>
+              <dt>{row.when}</dt>
+              <dd>{row.detail}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="fetes-reserve">
+          {c.art.limited}
+          <a href={`tel:${lesFetesContact.tel}`}>{lesFetesContact.phone}</a>
+          <a href={`mailto:${lesFetesContact.email}`}>{lesFetesContact.email}</a>
+        </p>
       </section>
 
       <section class="fetes-section" aria-labelledby="fetes-tables">
@@ -461,6 +506,39 @@ const eventsJson = {
   .fetes-when dd,
   .fetes-hours {
     margin: 0;
+  }
+
+  .fetes-when--time div {
+    grid-template-columns: 12.5rem 1fr;
+  }
+
+  .fetes .fetes-art-series {
+    font-family: 'Heebo', var(--font-body, sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ac6b53;
+    margin: 0 0 10px;
+  }
+
+  .fetes .fetes-art-artists {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .fetes .fetes-art-work {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 28px);
+    line-height: 1.25;
+    margin: 6px 0 18px;
+  }
+
+  .fetes-art-night {
+    margin-top: 36px;
   }
 
   .fetes-prices {

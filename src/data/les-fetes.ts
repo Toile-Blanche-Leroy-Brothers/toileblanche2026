@@ -42,6 +42,19 @@ export type LesFetesCopy = {
     food: Priced[];
     priceNote: string;
   };
+  art: {
+    label: string;
+    title: string;
+    series: string;
+    artists: string;
+    work: string;
+    lede: string;
+    venues: { name: string; when: string }[];
+    nightLabel: string;
+    nightLede: string;
+    schedule: { when: string; detail: string }[];
+    limited: string;
+  };
   tablesLabel: string;
   tablesIntro: string;
   tables: Table[];
@@ -74,7 +87,7 @@ const email = 'info@toileblanche.com';
 const fr: LesFetesCopy = {
   metaTitle: "Les Fêtes | Toile Blanche | Saint-Paul de Vence",
   metaDescription:
-    "Le bar d'hiver et les tables de fête à Toile Blanche, des week-ends de décembre au jour de l'An. Saint-Paul de Vence.",
+    "Le bar d'hiver, Sessions 13 et les tables de fête à Toile Blanche, des week-ends de décembre au jour de l'An. Saint-Paul de Vence.",
   eyebrow: "Fin d'année 2026",
   title: 'Les Fêtes',
   subtitle: 'à Toile Blanche',
@@ -114,7 +127,28 @@ const fr: LesFetesCopy = {
     ],
     priceNote: 'Prix en euros, nets, service compris. Carte des vins sur demande.',
   },
-  tablesLabel: 'Chapitre II',
+  art: {
+    label: 'Chapitre II',
+    title: "L'art à Toile Blanche",
+    series: 'Toile Blanche Sessions 13',
+    artists: 'Leroy Brothers',
+    work: 'Generative Institutional Derivatives',
+    lede: "Pour clore la saison, nous passons nous-mêmes de l'autre côté de la toile : notre dernier travail, en une exposition en deux lieux à Saint-Paul-de-Vence.",
+    venues: [
+      { name: 'Galerie Podgorny', when: '15 au 20 décembre' },
+      { name: 'Toile Blanche Contemporary', when: '19 décembre à fin février 2027' },
+    ],
+    nightLabel: 'Samedi 19 décembre · RAD/ART Tour',
+    nightLede: "Toute l'exposition, un seul soir.",
+    schedule: [
+      { when: '16h à 18h', detail: 'Présentation à la Galerie Podgorny' },
+      { when: '18h à 20h', detail: 'Présentation à Toile Blanche Contemporary' },
+      { when: '19h à 21h', detail: "RAD/ART After-Show au bar d'hiver" },
+      { when: '20h à minuit', detail: 'Toile Blanche Sessions 13, en plein air : couvrez-vous !' },
+    ],
+    limited: 'Places limitées pour les Sessions.',
+  },
+  tablesLabel: 'Chapitre III',
   tablesIntro: 'Les tables de fête. Sur réservation.',
   tables: [
     {
@@ -242,7 +276,7 @@ const fr: LesFetesCopy = {
   ],
   reserveLabel: 'Réservation',
   takeaway: {
-    label: 'Chapitre III',
+    label: 'Chapitre IV',
     title: 'À emporter',
     lede: [
       'Le foie gras au torchon, maison.',
@@ -255,7 +289,7 @@ const fr: LesFetesCopy = {
     note: 'Sur commande, à retirer du 18 au 24 décembre.',
   },
   stay: {
-    label: 'Chapitre IV',
+    label: 'Chapitre V',
     title: 'Séjourner, offrir',
     offers: [
       {
@@ -271,7 +305,7 @@ const fr: LesFetesCopy = {
         lines: [
           'Deux nuits du 30 décembre au 1er janvier, petit-déjeuner inclus.',
           'Le dîner du Réveillon.',
-          "Le 1er janvier, le bar de l'écailler et un plat de la Guinguette.",
+          "Le 1er janvier, l'assiette de l'écailler et un plat de la Guinguette.",
         ],
       },
       {
@@ -296,10 +330,16 @@ const fr: LesFetesCopy = {
   promo: {
     eyebrow: "Fin d'année 2026",
     title: 'Les Fêtes',
-    text: "Le bar d'hiver dès le 4 décembre, et quatre tables entre le réveillon de Noël et le jour de l'An.",
+    text: "Le bar d'hiver dès le 4 décembre, Sessions 13, et quatre tables entre le réveillon de Noël et le jour de l'An.",
     cta: 'Voir le programme',
   },
   events: [
+    {
+      name: 'Toile Blanche Sessions 13',
+      startDate: '2026-12-19',
+      description:
+        "RAD/ART Tour le 19 décembre : Galerie Podgorny de 16h à 18h, Toile Blanche Contemporary de 18h à 20h, after-show au bar d'hiver de 19h à 21h, puis Sessions 13 en plein air de 20h à minuit. Exposition Leroy Brothers, Generative Institutional Derivatives : Galerie Podgorny du 15 au 20 décembre, Toile Blanche Contemporary du 19 décembre à fin février 2027. Places limitées.",
+    },
     {
       name: 'Réveillon de Noël à Toile Blanche',
       startDate: '2026-12-24',
@@ -328,7 +368,7 @@ const fr: LesFetesCopy = {
 const en: LesFetesCopy = {
   metaTitle: 'Les Fêtes | Toile Blanche | Saint-Paul de Vence',
   metaDescription:
-    'The winter bar and the festive tables at Toile Blanche, from the December weekends through New Year’s Day. Saint-Paul de Vence.',
+    'The winter bar, Sessions 13 and the festive tables at Toile Blanche, from the December weekends through New Year’s Day. Saint-Paul de Vence.',
   eyebrow: 'Year’s end 2026',
   title: 'Les Fêtes',
   subtitle: 'at Toile Blanche',
@@ -368,7 +408,28 @@ const en: LesFetesCopy = {
     ],
     priceNote: 'Prices in euros, service included. Wine list on request.',
   },
-  tablesLabel: 'Chapter II',
+  art: {
+    label: 'Chapter II',
+    title: 'Art at Toile Blanche',
+    series: 'Toile Blanche Sessions 13',
+    artists: 'Leroy Brothers',
+    work: 'Generative Institutional Derivatives',
+    lede: 'To close the season, we step into the spotlight ourselves: our latest work, in a two-part exhibition across two venues in Saint-Paul-de-Vence.',
+    venues: [
+      { name: 'Galerie Podgorny', when: '15 to 20 December' },
+      { name: 'Toile Blanche Contemporary', when: '19 December to the end of February 2027' },
+    ],
+    nightLabel: 'Saturday 19 December · RAD/ART Tour',
+    nightLede: 'The whole show, one night only.',
+    schedule: [
+      { when: '4 pm to 6 pm', detail: 'Presentation at Galerie Podgorny' },
+      { when: '6 pm to 8 pm', detail: 'Presentation at Toile Blanche Contemporary' },
+      { when: '7 pm to 9 pm', detail: 'RAD/ART After-Show at the winter bar' },
+      { when: '8 pm to midnight', detail: 'Toile Blanche Sessions 13, outdoors: dress warmly' },
+    ],
+    limited: 'Limited places for the Sessions.',
+  },
+  tablesLabel: 'Chapter III',
   tablesIntro: 'Festive tables. By reservation.',
   tables: [
     {
@@ -416,7 +477,7 @@ const en: LesFetesCopy = {
         'For the occasion, we also serve:',
       ],
       extras: [
-        { name: 'Oyster platter: fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
+        { name: 'Seafood plate: fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
         { name: 'Truffled brie de Meaux, lamb’s lettuce', price: '14 €' },
         { name: 'Toile Blanche yule log', price: '12 €' },
       ],
@@ -474,7 +535,7 @@ const en: LesFetesCopy = {
         'For the occasion, we also serve:',
       ],
       extras: [
-        { name: 'Oyster platter: fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
+        { name: 'Seafood plate: fines de claire oysters, langoustines, trout gravlax, prawns, whelks, seafood rillettes', price: '34 €' },
         { name: 'Truffled brie de Meaux, lamb’s lettuce', price: '14 €' },
         { name: 'Black Forest cake, revisited', price: '12 €' },
       ],
@@ -484,7 +545,7 @@ const en: LesFetesCopy = {
   ],
   reserveLabel: 'Reservation',
   takeaway: {
-    label: 'Chapter III',
+    label: 'Chapter IV',
     title: 'To take home',
     lede: [
       'Homemade foie gras au torchon.',
@@ -497,7 +558,7 @@ const en: LesFetesCopy = {
     note: 'Order in advance. Collection from 18 to 24 December.',
   },
   stay: {
-    label: 'Chapter IV',
+    label: 'Chapter V',
     title: 'Stays and gifts',
     offers: [
       {
@@ -513,7 +574,7 @@ const en: LesFetesCopy = {
         lines: [
           'Two nights from 30 December to 1 January, breakfast included.',
           'New Year’s Eve dinner.',
-          'On 1 January, the oyster bar and a dish from La Guinguette.',
+          'On 1 January, the seafood plate and a dish from La Guinguette.',
         ],
       },
       {
@@ -538,10 +599,16 @@ const en: LesFetesCopy = {
   promo: {
     eyebrow: 'Year’s end 2026',
     title: 'Les Fêtes',
-    text: 'The winter bar from 4 December, and four tables between Christmas Eve and New Year’s Day.',
+    text: 'The winter bar from 4 December, Sessions 13, and four tables between Christmas Eve and New Year’s Day.',
     cta: 'See the programme',
   },
   events: [
+    {
+      name: 'Toile Blanche Sessions 13',
+      startDate: '2026-12-19',
+      description:
+        'RAD/ART Tour on 19 December: Galerie Podgorny from 4 pm to 6 pm, Toile Blanche Contemporary from 6 pm to 8 pm, after-show at the winter bar from 7 pm to 9 pm, then Sessions 13 outdoors from 8 pm to midnight. Leroy Brothers exhibition, Generative Institutional Derivatives: Galerie Podgorny from 15 to 20 December, Toile Blanche Contemporary from 19 December to the end of February 2027. Limited places.',
+    },
     {
       name: 'Christmas Eve dinner at Toile Blanche',
       startDate: '2026-12-24',
@@ -551,7 +618,7 @@ const en: LesFetesCopy = {
     {
       name: 'Christmas Day lunch at La Guinguette',
       startDate: '2026-12-25',
-      description: 'Lunch on 25 December at La Guinguette, the usual menu and the oyster platter.',
+      description: 'Lunch on 25 December at La Guinguette, the usual menu and the seafood plate.',
     },
     {
       name: 'New Year’s Eve dinner at Toile Blanche',
@@ -563,7 +630,7 @@ const en: LesFetesCopy = {
     {
       name: 'New Year’s Day lunch at La Guinguette',
       startDate: '2027-01-01',
-      description: 'Lunch on 1 January at La Guinguette, the usual menu and the oyster platter.',
+      description: 'Lunch on 1 January at La Guinguette, the usual menu and the seafood plate.',
     },
   ],
 };
